@@ -12,6 +12,7 @@
     --main: #F5F5F5; /* Grey 100 */
     --second: #EEEEEE; /* Grey 200 */
     --black: #000000; /* Black */
+    --black-rgb: 0, 0, 0; /* Black RGB */
 }
 
 * {
@@ -30,12 +31,36 @@ body {
     margin: 0 auto;
 }
 
+/*      */
+/* HERO */
+/*      */
+.hero {
+    height: 850px;
+    color: white;
+}
+
+.heroinformation {
+    font-size: 25px;
+}
+
+.hero p {
+    font-size: 25px;
+}
+
+.hero a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
 /*        */
 /* NAVBAR */
 /*        */
 nav {
-    background-color: var(--black);
+    position: fixed;
+    background-color: rgba(var(--black-rgb), 1);
     color: var(--white);
+    width: 100%;
 }
 
 .navbar {

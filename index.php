@@ -1,12 +1,23 @@
-<?php include 'layout/header.php' ?>
+    <?php include 'layout/header.php' ?>
 
-<?php
-    require_once './backend/conn.php';
-    $query = "SELECT * FROM movies";
-    $statement = $conn->prepare($query);
-    $statement->execute();
-    $movielist = $statement->fetchAll(PDO::FETCH_ASSOC);
-?>
+    <?php
+        require_once './backend/conn.php';
+        $query = "SELECT * FROM movies";
+        $statement = $conn->prepare($query);
+        $statement->execute();
+        $movielist = $statement->fetchAll(PDO::FETCH_ASSOC);
+    ?>
+    
+    <section class="hero" style="background-image: url(./style/img/<?php echo $movielist[0]['banner']; ?>.jpg);">
+        <!-- <?php $id = $movielist[0]['id']; ?> -->
+        <div class="heroinformation">
+            <!-- <h5><?php echo $movielist[0]; ?></h5> -->
+            <h5><?php echo $movielist['title'] ?></h5>
+            <p><?php echo $movielist['description'] ?></p>
+        </div>
+        <a href="movies.php?id=<?php echo $movielist[0]['id']; ?>"><i class="fa-solid fa-play"></i> Play</a>
+    </section>
+</header>
 
 <main>
     <div class="wrapper">
@@ -20,6 +31,8 @@
             <?php } ?>
         </div>
     </div>
+
+    <?php print_r($movielist) ?>
 </main>
 
 <?php include 'layout/footer.php' ?>

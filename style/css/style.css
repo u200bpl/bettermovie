@@ -1,0 +1,80 @@
+/*       */
+/* FONTS */
+/*       */
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@300&display=swap');
+/* font-family: 'Anek Tamil', sans-serif; */
+
+/*           */
+/* IMPORTANT */
+/*           */
+:root {
+    --white: #FFFFFF; /* White */
+    --main: #F5F5F5; /* Grey 100 */
+    --second: #EEEEEE; /* Grey 200 */
+    --navbar: #000000; /* Black */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Anek Tamil', sans-serif;
+}
+
+body {
+    background-color: var(--main);
+}
+
+.wrapper {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+/*        */
+/* NAVBAR */
+/*        */
+nav {
+    background-color: var(--navbar);
+    color: var(--white);
+}
+
+.navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: var(--white);
+    padding: 0 10px 0 0;
+    text-decoration: none;
+}
+
+.navbar h1 {
+    padding: 0 25px 0 0;
+    font-size: 21px;
+}
+
+.navbar h1 span {
+    font-size: 21px;
+    color: yellow;
+}
+
+.navleft {
+    display: flex;
+    align-items: center;
+}
+
+.navright {
+    display: flex;
+    align-items: center;
+}
+
+.navicons {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.active {
+    font-weight: bold;
+}

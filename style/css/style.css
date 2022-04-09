@@ -8,9 +8,10 @@
 /* IMPORTANT */
 /*           */
 :root {
+    --main: #221F1F; /* Black */
     --white: #FFFFFF; /* White */
-    --main: #F5F5F5; /* Grey 100 */
-    --second: #EEEEEE; /* Grey 200 */
+    --grey1: #F5F5F5; /* Grey 100 */
+    --grey2: #EEEEEE; /* Grey 200 */
     --black: #000000; /* Black */
     --black-rgb: 0, 0, 0; /* Black RGB */
     --bdr-rds: 10px; /* Border Radius */
@@ -71,6 +72,7 @@ body {
 
 .hero a {
     font-size: 32px;
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -101,6 +103,7 @@ nav {
     background-color: rgba(var(--black-rgb), 0.5);
     color: var(--white);
     width: 100%;
+    z-index: 1;
 }
 
 .navbar {
@@ -144,6 +147,45 @@ nav {
     font-weight: bold;
 }
 
+/* SEARCH */
+.search-box {
+    position: relative;
+    width: 250px;
+}
+
+.search-box .search-box__input {
+    outline: none;
+    background: rgba(0, 0, 0, 0.85);
+    border: solid 1px rgba(255, 255, 255, 0.85);
+    box-sizing: border-box;
+    padding: 7px 14px 7px 40px;
+    width: 0%;
+    color: #fff;
+    opacity: 0;
+    transition: ease width 1s, ease opacity 1s;
+    float: right;
+}
+
+.search-box .search-box__icon {
+    position: absolute;
+    top: 10px;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    right: 12px;
+    transition: ease transform 1s;
+    transition-delay: 50ms;
+  }
+
+.search-box.active .search-box__icon {
+    transform: translateX(-214px);
+}
+
+.search-box.active .search-box__input {
+    opacity: 1;
+    width: 100%;
+}
+
 /*               */
 /* MOVIE SECTION */
 /*               */
@@ -160,6 +202,7 @@ nav {
 }
 
 .movie {
+    position: relative;
     text-align: center;
     margin: 15px 5px 10px 5px;
     text-decoration: none;
@@ -174,11 +217,32 @@ nav {
 
 .movie a {
     text-decoration: none;
-    color: var(--black);
+    color: var(--white);
 }
 
 .movie p {
     margin: -8px;
+}
+
+/* HOVER */
+.overlay {
+    position: absolute; 
+    bottom: 7px; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 95%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: var(--bdr-rds);
+}
+  
+.container:hover .overlay {
+    opacity: 1;
 }
 
 /*            */

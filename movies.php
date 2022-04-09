@@ -18,7 +18,7 @@
     <img src="style/img/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner">
     <p><?php echo $movie['year']; ?></p>
     <p>Trailer</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $movie['trailer']; ?>" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+    <iframe src="https://databasegdriveplayer.co/player.php?imdb=<?php echo $movie['iframe']; ?>" frameborder="0" width="100%" height="400" allowfullscreen="1"> </iframe>
 <?php endforeach; ?>
 
 <?php include 'layout/footer.php' ?>

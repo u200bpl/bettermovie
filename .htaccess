@@ -1,0 +1,5 @@
+# Turn on the rewrite engine
+RewriteEngine on
+# RewriteCond %{REQUEST_URI} !\.php$ [NC]
+# RewriteCond %{REQUEST_URI} [^/]$
+# RewriteRule ^(.*)$ $1.php [L]

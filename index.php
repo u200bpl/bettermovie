@@ -8,15 +8,15 @@
         $movielist = $statement->fetchAll(PDO::FETCH_ASSOC);
     ?>
     
-    <section class="hero" style="background-image: url(./style/img/<?php echo $movielist[0]['banner']; ?>.jpg);">
-        <!-- <?php $id = $movielist[0]['id']; ?> -->
-        <div class="heroinformation">
-            <!-- <h5><?php echo $movielist[0]; ?></h5> -->
-            <h5><?php echo $movielist['title'] ?></h5>
-            <p><?php echo $movielist['description'] ?></p>
-        </div>
-        <a href="movies.php?id=<?php echo $movielist[0]['id']; ?>"><i class="fa-solid fa-play"></i> Play</a>
-    </section>
+    <?php for ($i = 0; $i < count($movielist); $i++) { ?>
+        <section class="hero" style="background-image: url(./style/img/<?php echo $movielist[$i]['banner']; ?>.jpg);">
+            <div class="heroinformation">
+                <img src="style/img/<?php echo $movielist[$i]['banner']; ?>-logo.png" alt="<?php echo $movie['title']; ?> img banner">
+                <p><?php echo $movielist[$i]['description']; ?></p>
+                <a class="btn" href="movies.php?id=<?php echo $movielist[$i]['id']; ?>"><i class="heroicon fa-solid fa-play"></i> Play</a>
+            </div>
+        </section>
+    <?php if ($i = 0) break; }?>
 </header>
 
 <main>

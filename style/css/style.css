@@ -83,15 +83,15 @@ body {
 }
 
 .btn {
-    background: var(--btn-bg);
-    color: var(--btn-txt);
+    background: rgba(var(--black-rgb), 0.5);
+    color: var(--black);
     border-radius: var(--btn-rds);
     padding: 2px 35px;
     font-weight: bold;
 }
 
 .btn:hover {
-    background: var(--btn-hover);
+    background: var(--black);
 }
 
 

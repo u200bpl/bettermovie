@@ -8,7 +8,7 @@
         $movielist = $statement->fetchAll(PDO::FETCH_ASSOC);
     ?>
     
-    <?php for ($nmr = 1, $i = $nmr; $i < count($movielist); $i++) { ?>
+    <?php for ($nmr = 0, $i = $nmr; $i < count($movielist); $i++) { ?>
         <section class="hero" style="background-image: url(./style/img/<?php echo $movielist[$i]['banner']; ?>.jpg);">
             <div class="heroinformation">
                 <img src="style/img/logos/<?php echo $movielist[$i]['banner']; ?>-logo.png" alt="<?php echo $movie['title']; ?> img banner">

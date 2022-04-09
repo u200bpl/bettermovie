@@ -11,7 +11,7 @@
     --white: #FFFFFF; /* White */
     --main: #F5F5F5; /* Grey 100 */
     --second: #EEEEEE; /* Grey 200 */
-    --navbar: #000000; /* Black */
+    --black: #000000; /* Black */
 }
 
 * {
@@ -34,7 +34,7 @@ body {
 /* NAVBAR */
 /*        */
 nav {
-    background-color: var(--navbar);
+    background-color: var(--black);
     color: var(--white);
 }
 
@@ -77,4 +77,43 @@ nav {
 
 .active {
     font-weight: bold;
+}
+
+/*               */
+/* MOVIE SECTION */
+/*               */
+.rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.rows {
+    color: var(--black);
+}
+
+.movie {
+    text-align: center;
+    margin: 15px 5px 10px 5px;
+    text-decoration: none;
+
+    height: 200px;
+    width: 390px;
+}
+
+.movie img {
+    height: 200px;
+    width: 390px;
+    border-radius: 10px;
+}
+
+.movie a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.movie p {
+    margin: -8px;
 }

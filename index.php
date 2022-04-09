@@ -8,15 +8,16 @@
         $movielist = $statement->fetchAll(PDO::FETCH_ASSOC);
     ?>
     
-    <?php for ($i = 0; $i < count($movielist); $i++) { ?>
+    <?php for ($nmr = 1, $i = $nmr; $i < count($movielist); $i++) { ?>
         <section class="hero" style="background-image: url(./style/img/<?php echo $movielist[$i]['banner']; ?>.jpg);">
             <div class="heroinformation">
-                <img src="style/img/<?php echo $movielist[$i]['banner']; ?>-logo.png" alt="<?php echo $movie['title']; ?> img banner">
+                <img src="style/img/logos/<?php echo $movielist[$i]['banner']; ?>-logo.png" alt="<?php echo $movie['title']; ?> img banner">
                 <p><?php echo $movielist[$i]['description']; ?></p>
                 <a class="btn" href="movies.php?id=<?php echo $movielist[$i]['id']; ?>"><i class="heroicon fa-solid fa-play"></i> Play</a>
+                <a class="btn" href="https://www.youtube.com/embed/<?php echo $movielist[$i]['trailer']; ?>"><i class="heroicon fa-solid fa-film"></i> Trailer</a>
             </div>
         </section>
-    <?php if ($i = 0) break; }?>
+    <?php if ($i = $nmr + 1) break; }?>
 </header>
 
 <main>
@@ -31,8 +32,6 @@
             <?php } ?>
         </div>
     </div>
-
-    <?php print_r($movielist) ?>
 </main>
 
 <?php include 'layout/footer.php' ?>

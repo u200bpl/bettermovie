@@ -4,5 +4,5 @@ var searchBox = document.getElementsByClassName("search-box")[0];
 searchIcon.addEventListener("click", activateSearch);
 
 function activateSearch() {
-  searchBox.classList.toggle("active");
+    searchBox.classList.toggle("active");
 }

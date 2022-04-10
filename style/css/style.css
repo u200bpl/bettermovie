@@ -55,10 +55,8 @@ body {
     padding: 25px 0;
     width: 500px;
 
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+    /* position: absolute; */
+    padding: 200px;
 }
 
 .heroinformation img {

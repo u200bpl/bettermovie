@@ -8,7 +8,9 @@
         $movielist = $statement->fetchAll(PDO::FETCH_ASSOC);
     ?>
     
-    <?php for ($nmr = 4, $i = $nmr; $i < count($movielist); $i++) { ?>
+    <?php for (
+        $i = rand(0, 4);
+        $i < count($movielist); $i++) { ?>
         <section class="hero" style="background-image: url(./style/img/<?php echo $movielist[$i]['banner']; ?>.jpg);">
             <div class="heroinformation">
                 <img src="style/img/logos/<?php echo $movielist[$i]['banner']; ?>-logo.png" alt="<?php echo $movie['title']; ?> img banner">
@@ -17,7 +19,7 @@
                 <a class="btn" href="https://www.youtube.com/embed/<?php echo $movielist[$i]['trailer']; ?>"><i class="heroicon fa-solid fa-film"></i> Trailer</a>
             </div>
         </section>
-    <?php if ($i = $nmr + 1) break; }?>
+    <?php break; }?>
 </header>
 
 <main>

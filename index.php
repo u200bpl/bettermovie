@@ -1,11 +1,11 @@
     <?php
-        require_once 'layout/head.php';
-        require_once 'layout/header.php';
+        require_once 'header.php';
+        require_once 'backend/config.php';
 
         session_start();
         if(!isset($_SESSION['user_id'])) {
             $msg = "Je moet eerst inloggen!";
-            header("Location: login.php?msg=$msg");
+            header("Location: login/?msg=$msg");
             exit;
         }
         
@@ -18,7 +18,7 @@
         for (
             $i = rand(0, 5);
             $i < count($movielist); $i++) { ?>
-        <section class="hero" style="background-image: url(./style/img/<?php echo $movielist[$i]['banner']; ?>.jpg);">
+        <section class="hero" style="background-image: url(<?php echo $base_url; ?>/style/img/<?php echo $movielist[$i]['banner']; ?>.jpg);">
             <div class="heroinformation">
                 <img src="style/img/logos/<?php echo $movielist[$i]['banner']; ?>-logo.png" alt="<?php echo $movie['title']; ?> img banner">
                 <p><?php echo $movielist[$i]['description']; ?></p>
@@ -65,4 +65,4 @@
     </div>
 </main>
 
-<?php require_once 'layout/footer.php' ?>
+<?php require_once 'footer.php' ?>

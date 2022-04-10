@@ -1,10 +1,13 @@
-<?php require_once 'layout/header.php' ?>
+<?php
+    require_once 'layout/header.php';
+    require_once 'backend/config.php';
+?>
 
     <?php
         $id = $_GET['id'];
 
         // Query
-        require_once './backend/conn.php';
+        require_once 'backend/conn.php';
         $query = "SELECT * FROM movies WHERE id = :id";
         $statement = $conn->prepare($query);
         $statement->execute([":id" => $id]);

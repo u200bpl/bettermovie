@@ -1,11 +1,12 @@
-	<?php
-		require_once 'layout/head.php';
-	?>
+<?php
+    require_once '../backend/config.php';
+	require_once '../head.php';
+?>
 </header>
 
 <main>
 	<div class="login">
-		<form action="./backend/controllers/loginController.php" method="post">
+		<form action="../backend/controllers/loginController.php" method="post">
 			<label for="username">
 				<i class="fas fa-user"></i>
 			</label>
@@ -27,4 +28,4 @@
 	</div>
 </main>
 
-<!-- <?php include './layout/footer.php' ?> -->
+<!-- <?php include 'layout/footer.php' ?> -->

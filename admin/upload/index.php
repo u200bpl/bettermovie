@@ -1,9 +1,9 @@
 <?php
-    require_once '../../layout/head.php';
-    require_once '../../layout/header.php';
+    require_once '../../header.php';
+    require_once '../../backend/config.php';
 
     // Query
-    require_once './backend/conn.php';
+    require_once '../../backend/conn.php';
     $query = "SELECT * FROM movies";
     $statement = $conn->prepare($query);
     $statement->execute();

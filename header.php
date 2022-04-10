@@ -1,9 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <?php require_once 'head.php'; ?>
+    </head>
+<body>   
 <?php
-    
-    // require_once 'head.php';
+
 
     // Query
-    require_once './backend/conn.php';
+    require_once 'backend/conn.php';
     $query = "SELECT * FROM movies";
     $statement = $conn->prepare($query);
     $statement->execute();
@@ -21,8 +26,8 @@
         <div class="wrapper">
             <div class="navbar">
                 <div class="navleft">
-                    <a href="index.php"><h1><span>Better</span>movie</h1></a>
-                    <a href="index.php" class="active">Homepage</a>
+                    <a href="<?php echo $base_url; ?>/index.php"><h1><span>Better</span>movie</h1></a>
+                    <a href="<?php echo $base_url; ?>/index.php" class="active">Homepage</a>
                     <a href="">Movies</a>
                     <a href="">Series</a>
                     <a href="">My list</a>
@@ -30,7 +35,7 @@
 
                 <div class="navright">
                     <div class="search-container">
-                        <form action="/action_page.php">
+                        <form action="#">
                             <div class="search-box">
                                 <i class="search-box__icon fa-solid fa-magnifying-glass"></i>
                                 <input class="search-box__input" placeholder="Title, genres, persons"/ name="search">
@@ -39,14 +44,13 @@
                     </div>
                     
                     <a href="#"><i class="navicons fa-solid fa-bell"></i></a>
-                    <a href="account.php"><i class="navicons fa-solid fa-user"></i></a>
+                    <a href="<?php echo $base_url; ?>/account.php"><i class="navicons fa-solid fa-user"></i></a>
                     <?php if($users['userrol'] >= 10) { ?>
-                        <a href="admin/upload/"><i class="navicons fa-solid fa-arrow-up-from-bracket"></i></a>
+                        <a href="<?php echo $base_url; ?>/admin/upload/"><i class="navicons fa-solid fa-arrow-up-from-bracket"></i></a>
                     <?php } ?>
-                    <a href="logout.php"><i class="navicons fa-solid fa-arrow-right-from-bracket"></i></a>
+                    <a href="<?php echo $base_url; ?>/logout/"><i class="navicons fa-solid fa-arrow-right-from-bracket"></i></a>
                 </div>
             </div>
         </div>
     </nav>
-    </div>
-    
+</div>    

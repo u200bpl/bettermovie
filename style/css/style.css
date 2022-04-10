@@ -13,6 +13,8 @@
     --grey1: #F5F5F5; /* Grey 100 */
     --grey2: #EEEEEE; /* Grey 200 */
     --black: #000000; /* Black */
+    --yellow: rgb(221, 221, 2); /* Yellow */
+    --yellow-hvr: rgb(255, 255, 0); /* Yellow Hover*/
     --black-rgb: 0, 0, 0; /* Black RGB */
     --bdr-rds: 10px; /* Border Radius */
 
@@ -123,7 +125,7 @@ nav {
 
 .navbar h1 span {
     font-size: 21px;
-    color: yellow;
+    color: var(--yellow);
 }
 
 .navleft {
@@ -137,7 +139,7 @@ nav {
 }
 
 .navicons {
-    margin: 0 10px;
+    margin: 0 2px;
     cursor: pointer;
 }
 
@@ -189,10 +191,8 @@ nav {
 /*               */
 .rows {
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
-}
-
-.rows {
     color: var(--black);
 }
 
@@ -227,7 +227,6 @@ nav {
 }
 
 .movie img {
-    height: 200px;
     width: 390px;
     border-radius: var(--bdr-rds);
 }
@@ -262,6 +261,57 @@ nav {
     opacity: 1;
 }
 
-/*            */
-/* MOVIE PAGE */
-/*            */
+/*             */
+/* LOGIN POAGE */
+/*             */
+.login {
+    width: 430px;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 300px auto;
+}
+
+.login form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+.login form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: var(--yellow);
+    color: var(--black);
+}
+.login form input[type="password"], .login form input[type="text"] {
+    width: 310px;
+    height: 50px;
+    border: none;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.login form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+   margin-top: 20px;
+    background-color: var(--yellow);
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--black);
+    transition: background-color 0.2s;
+}
+.login form input[type="submit"]:hover {
+  background-color: var(--yellow-hvr);
+    transition: background-color 0.2s;
+}
+
+.error {
+    color: var(--white);
+}
+
+.error span {
+    color: red;
+}

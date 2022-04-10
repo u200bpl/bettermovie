@@ -1,12 +1,18 @@
-<?php include 'head.php' ?>
-
 <?php
+    
+    // require_once 'head.php';
+
     // Query
     require_once './backend/conn.php';
     $query = "SELECT * FROM movies";
     $statement = $conn->prepare($query);
     $statement->execute();
     $movielist = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+    $query = "SELECT * FROM users";
+    $statement = $conn->prepare($query);
+    $statement->execute();
+    $users = $statement->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <header>
@@ -32,8 +38,12 @@
                         </form>
                     </div>
                     
-                    <i class="navicons fa-solid fa-bell"></i>
-                    <i class="navicons fa-solid fa-user"></i>
+                    <a href="#"><i class="navicons fa-solid fa-bell"></i></a>
+                    <a href="account.php"><i class="navicons fa-solid fa-user"></i></a>
+                    <?php if($users['userrol'] >= 10) { ?>
+                        <a href="admin/upload/"><i class="navicons fa-solid fa-arrow-up-from-bracket"></i></a>
+                    <?php } ?>
+                    <a href="logout.php"><i class="navicons fa-solid fa-arrow-right-from-bracket"></i></a>
                 </div>
             </div>
         </div>

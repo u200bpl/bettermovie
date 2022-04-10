@@ -1,4 +1,4 @@
-<?php include 'layout/header.php' ?>
+<?php require_once 'layout/header.php' ?>
 
     <?php
         $id = $_GET['id'];
@@ -22,4 +22,4 @@
     <iframe src="https://databasegdriveplayer.co/player.php?imdb=<?php echo $movie['iframe']; ?>" frameborder="0" width="100%" height="400" allowfullscreen="1"> </iframe>
 <?php endforeach; ?>
 
-<?php include 'layout/footer.php' ?>
+<?php require_once 'layout/footer.php' ?>

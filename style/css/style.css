@@ -8,7 +8,7 @@
 /* IMPORTANT */
 /*           */
 :root {
-    --main: #221F1F; /* Black */
+    --main: #141313; /* Black */
     --white: #FFFFFF; /* White */
     --grey1: #F5F5F5; /* Grey 100 */
     --grey2: #EEEEEE; /* Grey 200 */
@@ -228,7 +228,6 @@ nav {
 
 .movie img {
     width: 390px;
-    border-radius: var(--bdr-rds);
 }
 
 .movie a {
@@ -314,4 +313,31 @@ nav {
 
 .error span {
     color: red;
+}
+
+/*             */
+/* MOVIES PAGE */
+/*             */
+video::-internal-media-controls-download-button {
+    display:none;
+}
+    
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;    
+}
+    
+video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+}
+    
+audio::-internal-media-controls-download-button { 
+    display:none !important;  
+}
+    
+audio::-webkit-media-controls-enclosure {
+    overflow:hidden !important;
+}
+    
+audio::-webkit-media-controls-panel {
+    width: calc(100% + 30px) !important;
 }

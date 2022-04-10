@@ -41,7 +41,9 @@
                     <?php $id = $movie['id'] ?>
                     <div class="container">
                         <a href="movies.php?id=<?php echo $id;?>"><img src="style/img/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
-                        <div class="overlay"><?php echo $movie['title']; ?></div>
+                        <a href="movies.php?id=<?php echo $id;?>"><div class="overlay">
+                            <p><?php echo $movie['title']; ?></p>
+                        </div></a>
                     </div>
                 </div>
             <?php } ?>

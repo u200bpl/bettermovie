@@ -191,14 +191,33 @@ nav {
 /*               */
 .rows {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
     text-align: center;
 }
 
 .rows {
     color: var(--black);
+}
+
+.rowstitel {
+    margin: 25px 0 10px 0;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.rowstitel h4 {
+    display: inline;
+    font-size: 26px;
+    color: var(--white);
+}
+
+.rowstitel a {
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.rowstitel a:hover {
+    padding: 0 0 0 5px;
 }
 
 .movie {

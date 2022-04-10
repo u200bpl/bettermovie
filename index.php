@@ -8,7 +8,7 @@
         $movielist = $statement->fetchAll(PDO::FETCH_ASSOC);
     ?>
     
-    <?php for ($nmr = 0, $i = $nmr; $i < count($movielist); $i++) { ?>
+    <?php for ($nmr = 4, $i = $nmr; $i < count($movielist); $i++) { ?>
         <section class="hero" style="background-image: url(./style/img/<?php echo $movielist[$i]['banner']; ?>.jpg);">
             <div class="heroinformation">
                 <img src="style/img/logos/<?php echo $movielist[$i]['banner']; ?>-logo.png" alt="<?php echo $movie['title']; ?> img banner">
@@ -22,8 +22,12 @@
 
 <main>
     <div class="wrapper">
-        <div class="rows">               
-            <?php foreach(array_slice($movielist, 0, 4) as $movie ) {?>
+        <div class="rowstitel">
+            <a href="populair.php"><h4>Most populair last 24/h</h4></a>
+            <a href="populair.php">See full list <i class="fa-solid fa-angles-right"></i></a>
+        </div>
+        <div class="rows">
+            <?php foreach(array_slice($movielist, 0, 5) as $movie ) {?>
                 <div class="movie">
                     <?php $id = $movie['id'] ?>
                     <div class="container">

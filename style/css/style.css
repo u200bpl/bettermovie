@@ -253,7 +253,9 @@ nav {
     font-size: 20px;
     padding: 10px;
     text-align: center;
-    border-radius: var(--bdr-rds);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
   
 .container:hover .overlay {

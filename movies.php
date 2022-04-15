@@ -17,13 +17,8 @@
 </header>
 
 <?php foreach($movielist as $movie): ?>
-    <!-- <p><?php echo $movie['id']; ?></p>
-    <p><?php echo $movie['title']; ?></p>
-    <p><?php echo $movie['genre']; ?></p> -->
-    <!-- <img src="style/img/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"> -->
-    <!-- <p><?php echo $movie['year']; ?></p> -->
-    <!-- <p>Trailer</p> -->
-    <iframe src="https://databasegdriveplayer.co/player.php?imdb=<?php echo $movie['iframe']; ?>" controls="0" frameborder="0" width="100%" height="100%" allowfullscreen="1"> </iframe>
+    <video width="100%" height="100%" controls="controls" autoplay="autoplay" id="vid">
+        <source src="movies/<?php echo $movie['movie']; ?>.mp4" type="video/mp4">
+    </video> 
+    <!-- <iframe src="https://databasegdriveplayer.co/player.php?imdb=<?php echo $movie['iframe']; ?>" controls="0" frameborder="0" width="100%" height="100%" allowfullscreen="1"> </iframe> -->
 <?php endforeach; ?>
-
-<?php require_once 'footer.php' ?>

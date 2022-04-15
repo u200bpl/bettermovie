@@ -1,6 +1,6 @@
 <?php
-    // require_once 'header.php';
-    require_once 'head.php';
+    require_once 'layout/head.php';
+    // require_once 'layout/header.php';
     require_once 'backend/config.php';
 ?>
 

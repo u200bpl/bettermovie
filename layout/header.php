@@ -5,8 +5,6 @@
     </head>
 <body>   
 <?php
-
-
     // Query
     require_once 'backend/conn.php';
     $query = "SELECT * FROM movies";

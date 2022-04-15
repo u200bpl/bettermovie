@@ -94,7 +94,6 @@ body {
     background: var(--black);
 }
 
-
 /*        */
 /* NAVBAR */
 /*        */
@@ -191,7 +190,7 @@ nav {
 /*               */
 .rows {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     text-align: center;
     color: var(--black);
 }

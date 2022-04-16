@@ -8,3 +8,4 @@
 <title>Bettermovie | <?php echo basename($_SERVER['PHP_SELF']); ?></title>
 
 <link rel="stylesheet" href="<?php echo $base_url; ?>/style/css/style.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>

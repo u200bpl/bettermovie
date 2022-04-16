@@ -28,7 +28,7 @@
                     <a href="<?php echo $base_url; ?>/index.php" class="active">Homepage</a>
                     <a href="">Movies</a>
                     <a href="">Series</a>
-                    <a href="">My list</a>
+                    <!-- <a href="">My list</a> -->
                 </div>
 
                 <div class="navright">

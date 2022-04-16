@@ -1,6 +1,6 @@
 <?php
-    require_once 'layout/head.php';
-    // require_once 'layout/header.php';
+    require_once 'head.php';
+    // require_once 'header.php';
     require_once 'backend/config.php';
 ?>
 
@@ -17,10 +17,6 @@
 </header>
 
 <?php foreach($movielist as $movie): ?>
-    <!-- <video width="100%" height="100%" controls="controls" autoplay="autoplay" id="vid">
-        <source src="movies/<?php echo $movie['movie']; ?>.mp4" type="video/mp4">
-    </video> -->
-
     <div id="player"></div>
     <script>
         var player = new Clappr.Player({

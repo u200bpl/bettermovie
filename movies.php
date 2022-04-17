@@ -6,7 +6,7 @@
         session_start();
         if(!isset($_SESSION['user_id'])) {
             $msg = "Je moet eerst inloggen!";
-            header("Location: login/?msg=$msg");
+            header("Location: subscriptions.php");
             exit;
         }
         
@@ -19,7 +19,7 @@
         for (
             $i = rand(0, 5);
             $i < count($movielist); $i++) { ?>
-        <section class="hero" style="background-image: url(<?php echo $base_url; ?>/style/img/<?php echo $movielist[$i]['banner']; ?>.jpg);">
+        <section class="hero" style="background-image: url(<?php echo $base_url; ?>/style/img/movies/<?php echo $movielist[$i]['banner']; ?>.jpg);">
             <div class="heroinformation">
                 <img src="style/img/logos/<?php echo $movielist[$i]['banner']; ?>-logo.png" alt="<?php echo $movie['title']; ?> img banner">
                 <p><?php echo $movielist[$i]['description']; ?></p>
@@ -49,7 +49,7 @@
                     <?php if ($movie['genre'] == "comedy") { ?>
                     <div class="movie-container">
                         <div class="movie-list">
-                            <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
+                            <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
                             <div class="overlay">
                                 <div class="sct-left">
                                     <p><i class="fa-solid fa-star"></i></p>
@@ -89,7 +89,7 @@
                     <?php if ($movie['genre'] == "action") { ?>
                     <div class="movie-container">
                         <div class="movie-list">
-                            <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
+                            <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
                             <div class="overlay">
                                 <div class="sct-left">
                                     <p><i class="fa-solid fa-star"></i></p>

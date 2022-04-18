@@ -54,6 +54,7 @@
                 <?php $id = $movie['id'] ?>
                 <div class="movie-container">
                     <div class="movie-list">
+                        <div class="quality"><p><?php echo $movie['quality']; ?></p></div>
                         <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
                         <div class="overlay">
                             <div class="sct-left">
@@ -92,6 +93,7 @@
                 <?php $id = $movie['id'] ?>
                 <div class="movie-container">
                     <div class="movie-list">
+                        <div class="quality"><p><?php echo $movie['quality']; ?></p></div>
                         <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
                         <div class="overlay">
                             <div class="sct-left">

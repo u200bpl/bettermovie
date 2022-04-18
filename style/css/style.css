@@ -250,6 +250,15 @@ nav {
     margin: 10px 0 20px 0;
 }
 
+.quality {
+    top: 3%;
+    left: 92%;
+    position: absolute;
+    background: var(--yellow);
+    padding: 7px 12px;
+    border-radius: 3px;
+}
+
 .card-container {
     position: absolute;
     width: 99%;
@@ -336,6 +345,22 @@ nav {
     align-items: center;
 }
 
+.movieoverlay {
+    position: absolute;
+    margin: 15px;
+    text-align: center;
+}
+
+.movieoverlay a {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.test {
+    font-size: 32px;
+}
+
 /*             */
 /* LOGIN POAGE */
 /*             */
@@ -392,7 +417,7 @@ nav {
 }
 
 /*              */
-/* TEST SECTION */
+/* PLAN SECTION */
 /*              */
 .lgn-btn {
     padding: 5px 0 5px 10px;
@@ -459,4 +484,60 @@ nav {
 
 .prch-btn button:hover {
     font-weight: bold;
+}
+
+/*            */
+/* MOVIE PAGE */
+/*            */
+.moviehero {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    color: white;
+}
+
+.movieinfo {
+    padding: 25px;
+    background-color: rgba(var(--black-rgb), 0.5);
+    border-radius: 10px;
+    margin: 25px 0;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.moviecontent {
+    margin: 0 auto;
+}
+
+.moviecontent h5 {
+    font-size: 35px;
+}
+
+.moviecontent span {
+    font-weight: bold;
+}
+
+.info-btn {
+    color: black;
+    display: flex;
+    margin: 10px 0;
+}
+
+.info-btn a {
+    background: var(--btn-login);
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 10px 0 0;
+}
+
+.description {
+    margin: 10px 0;
 }

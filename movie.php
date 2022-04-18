@@ -20,19 +20,28 @@
         $statement = $conn->prepare($query);
         $statement->execute([":id" => $id]);
         $movielist = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($movielist as $movie):
     ?>
+        <section class="moviehero" style="background-image: url(style/img/movies/<?php echo $movie['banner']; ?>.jpg);"> 
+            <div class="movieinfo">
+                <div class="moviecontent">
+                    <h5><?php echo $movie['title']; ?></h5>
+                    <div class="info-btn">
+                        <a href="">Trailer</a>
+                        <a href=""><?php echo $movie['quality']; ?></a>
+                    </div>
+                    
+                    <div class="description"><p><?php echo $movie['description']; ?></p></div>
+                    <p><span>Release date: </span><?php echo $movie['year']; ?></p>
+                    <p><span>Genre: </span><?php echo $movie['genre']; ?></p>
+                    <p><span>Duration: </span><?php echo $movie['duration']; ?> min</p>
+                </div>
+            </div>
+        </section>
+    <?php endforeach; ?>
 </header>
 
 <?php foreach($movielist as $movie): ?>
-    <div id="player"></div>
-    <script>
-        var player = new Clappr.Player({
-            source: "movies/<?php echo $movie['movie']; ?>.mp4",
-            parentId: "#player",
-            height: "100%",
-            width: "100%",
-            autoPlay: true,
-        });
-    </script>
-    <!-- <iframe src="https://databasegdriveplayer.co/player.php?imdb=<?php echo $movie['iframe']; ?>" controls="0" frameborder="0" width="100%" height="100%" allowfullscreen="1"> </iframe> -->
+    
 <?php endforeach; ?>

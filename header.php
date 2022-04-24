@@ -33,9 +33,9 @@
 
                 <div class="navright">
                     <div class="search-container">
-                        <form action="#">
+                        <form action="movies.php">
                             <div class="search-box">
-                                <i class="search-box__icon fa-solid fa-magnifying-glass"></i>
+                                <i class="dropbtn search-box__icon fa-solid fa-magnifying-glass"></i>
                                 <input class="search-box__input" placeholder="Title, genres, persons" name="search">
                             </div>
                         </form>

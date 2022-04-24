@@ -46,25 +46,25 @@
         <div class="card-container">
             <?php foreach(array_slice($movielist, 0, 6) as $movie ) {?>
                 <?php $id = $movie['id'] ?>
-                    <?php if ($movie['genre'] == "comedy") { ?>
-                    <div class="movie-container">
-                        <div class="movie-list">
-                            <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
-                            <div class="overlay">
-                                <div class="sct-left">
-                                    <p><i class="fa-solid fa-star"></i></p>
-                                </div>
+                <?php if ($movie['genre'] == "comedy") { ?>
+                <div class="movie-container">
+                    <div class="movie-list">
+                        <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
+                        <div class="overlay">
+                            <div class="sct-left">
+                                <p><i class="fa-solid fa-star"></i></p>
+                            </div>
                                         
-                                <div class="sct-center">
-                                    <p><?php echo $movie['title']; ?></p>
-                                </div>
+                            <div class="sct-center">
+                                <p><?php echo $movie['title']; ?></p>
+                            </div>
 
-                                <div class="sct-right">
-                                    <a href="https://www.youtube.com/watch?v=<?php echo $movie['trailer']; ?>"><i class="fa-solid fa-clapperboard"></i></a>
-                                </div>
+                            <div class="sct-right">
+                                <a href="https://www.youtube.com/watch?v=<?php echo $movie['trailer']; ?>"><i class="fa-solid fa-clapperboard"></i></a>
                             </div>
                         </div>
                     </div>
+                </div>
                 <?php } ?>
             <?php } ?>
         </div>
@@ -86,25 +86,25 @@
         <div class="card-container" id="normalmovielist">
             <?php foreach(array_slice($movielist, 0, 6) as $movie ) {?>
                 <?php $id = $movie['id'] ?>
-                    <?php if ($movie['genre'] == "action") { ?>
-                    <div class="movie-container">
-                        <div class="movie-list">
-                            <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
-                            <div class="overlay">
-                                <div class="sct-left">
-                                    <p><i class="fa-solid fa-star"></i></p>
-                                </div>
+                <?php if ($movie['genre'] == "action") { ?>
+                <div class="movie-container">
+                    <div class="movie-list">
+                        <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
+                        <div class="overlay">
+                            <div class="sct-left">
+                                <p><i class="fa-solid fa-star"></i></p>
+                            </div>
                                         
-                                <div class="sct-center">
-                                    <p><?php echo $movie['title']; ?></p>
-                                </div>
+                            <div class="sct-center">
+                                <p><?php echo $movie['title']; ?></p>
+                            </div>
 
-                                <div class="sct-right">
-                                    <a href="https://www.youtube.com/watch?v=<?php echo $movie['trailer']; ?>"><i class="fa-solid fa-clapperboard"></i></a>
-                                </div>
+                            <div class="sct-right">
+                                <a href="https://www.youtube.com/watch?v=<?php echo $movie['trailer']; ?>"><i class="fa-solid fa-clapperboard"></i></a>
                             </div>
                         </div>
                     </div>
+                </div>
                 <?php } ?>
             <?php } ?>
         </div>
@@ -122,28 +122,28 @@
     <div class="movie-list">
         <button class="pre-btn"><img src="style/img/buttons/pre.png" alt=""></button>
         <button class="nxt-btn"><img src="style/img/buttons/nxt.png" alt=""></button>
-        <div class="card-container" id="normalmovielist">
+        <div class="card-container">
             <?php foreach(array_slice($movielist, 0, 6) as $movie ) {?>
                 <?php $id = $movie['id'] ?>
-                    <?php if ($movie['genre'] == "horror") { ?>
-                    <div class="movie-container">
-                        <div class="movie-list">
-                            <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
-                            <div class="overlay">
-                                <div class="sct-left">
-                                    <p><i class="fa-solid fa-star"></i></p>
-                                </div>
+                <?php if ($movie['genre'] == "horror") { ?>
+                <div class="movie-container">
+                    <div class="movie-list">
+                        <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
+                        <div class="overlay">
+                            <div class="sct-left">
+                                <p><i class="fa-solid fa-star"></i></p>
+                            </div>
                                         
-                                <div class="sct-center">
-                                    <p><?php echo $movie['title']; ?></p>
-                                </div>
+                            <div class="sct-center">
+                                <p><?php echo $movie['title']; ?></p>
+                            </div>
 
-                                <div class="sct-right">
-                                    <a href="https://www.youtube.com/watch?v=<?php echo $movie['trailer']; ?>"><i class="fa-solid fa-clapperboard"></i></a>
-                                </div>
+                            <div class="sct-right">
+                                <a href="https://www.youtube.com/watch?v=<?php echo $movie['trailer']; ?>"><i class="fa-solid fa-clapperboard"></i></a>
                             </div>
                         </div>
                     </div>
+                </div>
                 <?php } ?>
             <?php } ?>
         </div>

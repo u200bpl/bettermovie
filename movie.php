@@ -25,13 +25,14 @@
     ?>
         <section class="moviehero" style="background-image: url(style/img/movies/<?php echo $movie['banner']; ?>.jpg);"> 
             <div class="movieinfo">
-                <div class="moviecontent">
+                <div class="sectioninfo">
                     <h5><?php echo $movie['title']; ?></h5>
                     <div class="info-btn">
-                        <a href="">Trailer</a>
-                        <a href=""><?php echo $movie['quality']; ?></a>
+                        <a href="watch.php?id=<?php echo $id;?>"><i class="fa-solid fa-video"></i> Watch movie</a>
+                        <a href="https://www.youtube.com/watch?v=<?php echo $movie['trailer']; ?>"><i class="fa-solid fa-clapperboard"></i> Trailer</a>
+                        <a><?php echo $movie['quality']; ?></a>
                     </div>
-                    
+                        
                     <div class="description"><p><?php echo $movie['description']; ?></p></div>
                     <p><span>Release date: </span><?php echo $movie['year']; ?></p>
                     <p><span>Genre: </span><?php echo $movie['genre']; ?></p>
@@ -41,7 +42,3 @@
         </section>
     <?php endforeach; ?>
 </header>
-
-<?php foreach($movielist as $movie): ?>
-    
-<?php endforeach; ?>

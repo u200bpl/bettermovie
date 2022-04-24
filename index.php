@@ -29,8 +29,8 @@
             <div class="heroinformation">
                 <img src="style/img/logos/<?php echo $movielist[$i]['banner']; ?>-logo.png" alt="<?php echo $movie['title']; ?> img banner">
                 <p><?php echo $movielist[$i]['description']; ?></p>
-                <a class="btn" href="movie.php?id=<?php echo $movielist[$i]['id']; ?>"><i class="heroicon fa-solid fa-play"></i> Play</a>
-                <a class="btn" href="https://www.youtube.com/embed/<?php echo $movielist[$i]['trailer']; ?>"><i class="heroicon fa-solid fa-film"></i> Trailer</a>
+                <a class="btn" href="watch.php?id=<?php echo $movielist[$i]['id']; ?>"><i class="heroicon fa-solid fa-video"></i> Play</a>
+                <a class="btn" href="movie.php?id=<?php echo $movielist[$i]['id']; ?>"><i class="heroicon fa-solid fa-circle-info"></i> Information</a>
             </div>
         </section>
     <?php break; }?>
@@ -50,7 +50,7 @@
         <button class="pre-btn"><img src="style/img/buttons/pre.png" alt=""></button>
         <button class="nxt-btn"><img src="style/img/buttons/nxt.png" alt=""></button>
         <div class="card-container">
-            <?php foreach(array_slice($recentmovielist, 0, 6) as $movie ) {?>
+            <?php foreach(array_slice($recentmovielist, 0, 15) as $movie ) {?>
                 <?php $id = $movie['id'] ?>
                 <div class="movie-container">
                     <div class="movie-list">
@@ -89,7 +89,7 @@
         <button class="pre-btn"><img src="style/img/buttons/pre.png" alt=""></button>
         <button class="nxt-btn"><img src="style/img/buttons/nxt.png" alt=""></button>
         <div class="card-container" id="normalmovielist">
-            <?php foreach(array_slice($movielist, 0, 6) as $movie ) {?>
+            <?php foreach(array_slice($movielist, 0, 15) as $movie ) {?>
                 <?php $id = $movie['id'] ?>
                 <div class="movie-container">
                     <div class="movie-list">

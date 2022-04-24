@@ -172,7 +172,7 @@ nav {
     color: white;
     z-index: 10;
     cursor: pointer;
-    right: 20px;
+    right: 12px;
     transition: ease transform 1s;
     transition-delay: 50ms;
   }
@@ -535,12 +535,11 @@ nav {
     padding: 25px;
     background-color: rgba(var(--black-rgb), 0.5);
     border-radius: 10px;
-    margin: 25px 0;
     width: 80%;
     position: absolute;
-    top: 50%;
+    top: 58%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
 }
 
 .moviecontent {
@@ -549,10 +548,6 @@ nav {
 
 .moviecontent h5 {
     font-size: 35px;
-}
-
-.moviecontent span {
-    font-weight: bold;
 }
 
 .info-btn {
@@ -573,4 +568,12 @@ nav {
 
 .description {
     margin: 10px 0;
+}
+
+.sectioninfo span {
+    font-weight: bold;
+}
+
+.sectioninfo h5 {
+    text-align: center;
 }

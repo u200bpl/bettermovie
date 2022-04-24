@@ -26,7 +26,7 @@
                 <div class="navleft">
                     <a href="<?php echo $base_url; ?>/index.php"><h1><span>Better</span>movie</h1></a>
                     <a href="<?php echo $base_url; ?>/index.php" class="active">Homepage</a>
-                    <a href="movies.php">Movies</a>
+                    <a href="<?php echo $base_url; ?>/movies.php">Movies</a>
                     <a href="">Series</a>
                     <!-- <a href="">My list</a> -->
                 </div>
@@ -36,17 +36,23 @@
                         <form action="#">
                             <div class="search-box">
                                 <i class="search-box__icon fa-solid fa-magnifying-glass"></i>
-                                <input class="search-box__input" placeholder="Title, genres, persons"/ name="search">
+                                <input class="search-box__input" placeholder="Title, genres, persons" name="search">
                             </div>
                         </form>
                     </div>
                     
-                    <a href="#"><i class="navicons fa-solid fa-bell"></i></a>
-                    <a href="<?php echo $base_url; ?>/account.php"><i class="navicons fa-solid fa-user"></i></a>
-                    <?php if($users['userrol'] >= 10) { ?>
-                        <a href="<?php echo $base_url; ?>/admin/upload/"><i class="navicons fa-solid fa-arrow-up-from-bracket"></i></a>
-                    <?php } ?>
-                    <a href="<?php echo $base_url; ?>/logout/"><i class="navicons fa-solid fa-arrow-right-from-bracket"></i></a>
+                    <a href="#"><i class="navicons fa-solid fa-bell"></i></a>                    
+                    
+                    <div class="dropdown">
+                        <button onclick="dropDown()" class="dropbtn navicons fa-solid fa-user"></button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="<?php echo $base_url; ?>/account/"><i class="navicons fa-solid fa-user"></i> Settings</a>
+                            <a href="<?php echo $base_url; ?>/logout/"><i class="navicons fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                            <?php if($users['userrol'] >= 10) { ?>
+                                <a href="<?php echo $base_url; ?>/admin/upload/"><i class="navicons fa-solid fa-arrow-up-from-bracket"></i> Upload</a>
+                            <?php } ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

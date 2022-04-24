@@ -10,3 +10,5 @@
     $movielist = $statement->fetchAll(PDO::FETCH_ASSOC);
 ?>
 Upload page
+
+<?php require_once '../../footer.php'; ?>

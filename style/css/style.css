@@ -577,3 +577,58 @@ nav {
 .sectioninfo h5 {
     text-align: center;
 }
+
+/*             */
+/* UPLOAD PAGE */
+/*             */
+.upload {
+    padding: 25px;
+    background-color: rgba(var(--black-rgb), 0.5);
+    border-radius: 10px;
+    width: 50%;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white)                             ;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin: 15px 0;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input {
+    background: none;
+    color: var(--white);
+    padding: 5px;
+    border: 1px solid var(--white);
+}
+
+.addbtn {
+    background: var(--yellow);
+    border: none;
+    border-radius: var(--btn-rds);
+    padding: 10px;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.addbtn input {
+    border: none;
+    background: none;
+    outline: none;
+}

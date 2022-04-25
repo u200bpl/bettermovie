@@ -127,7 +127,7 @@
         <button class="pre-btn"><img src="style/img/buttons/pre.png" alt=""></button>
         <button class="nxt-btn"><img src="style/img/buttons/nxt.png" alt=""></button>
         <div class="card-container">
-            <?php foreach(array_slice($movielist, 0, 6) as $movie ) {?>
+            <?php foreach(array_slice($movielist, 0, 15) as $movie ) {?>
                 <?php $id = $movie['id'] ?>
                 <?php if ($movie['genre'] == "comedy") { ?>
                 <div class="movie-container">
@@ -168,7 +168,7 @@
         <button class="pre-btn"><img src="style/img/buttons/pre.png" alt=""></button>
         <button class="nxt-btn"><img src="style/img/buttons/nxt.png" alt=""></button>
         <div class="card-container" id="normalmovielist">
-            <?php foreach(array_slice($movielist, 0, 6) as $movie ) {?>
+            <?php foreach(array_slice($movielist, 0, 15) as $movie ) {?>
                 <?php $id = $movie['id'] ?>
                 <?php if ($movie['genre'] == "action") { ?>
                 <div class="movie-container">
@@ -208,7 +208,7 @@
         <button class="pre-btn"><img src="style/img/buttons/pre.png" alt=""></button>
         <button class="nxt-btn"><img src="style/img/buttons/nxt.png" alt=""></button>
         <div class="card-container">
-            <?php foreach(array_slice($movielist, 0, 6) as $movie ) {?>
+            <?php foreach(array_slice($movielist, 0, 15) as $movie ) {?>
                 <?php $id = $movie['id'] ?>
                 <?php if ($movie['genre'] == "horror") { ?>
                 <div class="movie-container">

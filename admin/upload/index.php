@@ -2,11 +2,11 @@
     require_once '../../header.php';
     require_once '../../backend/config.php';
 
-    // session_start();
-    // if(!$_SESSION['userrol'] < 10) {
-    //     header("Location: ../../index.php");
-    //     exit;
-    // }
+    session_start();
+    if(!$_SESSION['userrol'] < 10) {
+        header("Location: ../../index.php");
+        exit;
+    }
 
     // Query
     require_once '../../backend/conn.php';
@@ -17,51 +17,51 @@
 ?>
 
 <div class="upload">
-    <form action="../../backend/controllers/uploadController.php">
+    <form action="../../backend/controllers/uploadController.php" method="POST">
         <div class="form">
             <div class="form-group">
                 <label for="name">Movie name:</label><br>
-                <input type="text" id="name" name="name" placeholder="Movie Name">
+                <input type="text" id="name" name="name" placeholder="Uncharted">
             </div>
 
             <div class="form-group">
                 <label for="desc">Description:</label><br>
-                <input type="text" id="desc" name="desc" placeholder="Movie Description">
+                <input type="text" id="desc" name="desc" placeholder="Street-smart Nathan Drake is recruited by seasoned treasure hunter Victor Sully Sullivan to recover a fortune amassed by Ferdinand Magellan, and lost 500 years ago by the House of Moncada.">
             </div>
 
             <div class="form-group">
                 <label for="genre">Genre:</label><br>
-                <input type="text" id="genre" name="genre" placeholder="Movie Genre">
-            </div>
-
-            <div class="form-group">
-                <label for="banner">Banner:</label><br>
-                <input type="text" id="banner" name="banner" placeholder="Movie Banner">
+                <input type="text" id="genre" name="genre" placeholder="action">
             </div>
 
             <div class="form-group">
                 <label for="dur">Duration:</label><br>
-                <input type="text" id="dur" name="dur" placeholder="Movie Duration">
+                <input type="text" id="dur" name="dur" placeholder="116">
+            </div>
+
+            <div class="form-group">
+                <label for="banner">Banner:</label><br>
+                <input type="text" id="banner" name="banner" placeholder="uncharted">
             </div>
 
             <div class="form-group">
                 <label for="year">Release Year:</label><br>
-                <input type="text" id="year" name="year" placeholder="Movie Release Year">
+                <input type="text" id="year" name="year" placeholder="2022">
             </div>
 
             <div class="form-group">
                 <label for="trailer">Trailer:</label><br>
-                <input type="text" id="trailer" name="trailer" placeholder="Movie Trailer">
+                <input type="text" id="trailer" name="trailer" placeholder="eHp3MbsCbMg">
             </div>
 
             <div class="form-group">
                 <label for="iframe">Iframe:</label><br>
-                <input type="text" id="iframe" name="iframe" placeholder="Movie Iframe Link">
+                <input type="text" id="iframe" name="iframe" placeholder="tt1464335">
             </div>
 
             <div class="form-group">
                 <label for="quality">Quality:</label><br>
-                <input type="text" id="quality" name="quality" placeholder="Movie Quality">
+                <input type="text" id="quality" name="quality" placeholder="SD">
             </div>
         </div>
 

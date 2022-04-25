@@ -617,6 +617,10 @@ nav {
 }
 
 .addbtn {
+    text-align: center;
+}
+
+.addbtn input {
     background: var(--yellow);
     border: none;
     border-radius: var(--btn-rds);
@@ -625,10 +629,4 @@ nav {
     width: 50%;
     text-align: center;
     margin: 0 auto;
-}
-
-.addbtn input {
-    border: none;
-    background: none;
-    outline: none;
 }

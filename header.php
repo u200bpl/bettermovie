@@ -25,7 +25,7 @@
             <div class="navbar">
                 <div class="navleft">
                     <a href="<?php echo $base_url; ?>/index.php"><h1><span>Better</span>movie</h1></a>
-                    <a href="<?php echo $base_url; ?>/index.php" class="active">Homepage</a>
+                    <a href="<?php echo $base_url; ?>/index.php">Homepage</a>
                     <a href="<?php echo $base_url; ?>/movies.php">Movies</a>
                     <a href="">Series</a>
                     <!-- <a href="">My list</a> -->

@@ -49,7 +49,7 @@
                 <?php if ($movie['genre'] == "comedy") { ?>
                 <div class="movie-container">
                     <div class="movie-list">
-                        <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
+                        <a href="movieinfo.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
                         <div class="overlay">
                             <div class="sct-left">
                                 <p><i class="fa-solid fa-star"></i></p>
@@ -89,7 +89,7 @@
                 <?php if ($movie['genre'] == "action") { ?>
                 <div class="movie-container">
                     <div class="movie-list">
-                        <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
+                        <a href="movieinfo.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
                         <div class="overlay">
                             <div class="sct-left">
                                 <p><i class="fa-solid fa-star"></i></p>
@@ -128,7 +128,7 @@
                 <?php if ($movie['genre'] == "horror") { ?>
                 <div class="movie-container">
                     <div class="movie-list">
-                        <a href="movie.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
+                        <a href="movieinfo.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
                         <div class="overlay">
                             <div class="sct-left">
                                 <p><i class="fa-solid fa-star"></i></p>

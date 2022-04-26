@@ -5,7 +5,6 @@
 
         session_start();
         if(!isset($_SESSION['user_id'])) {
-            $msg = "Je moet eerst inloggen!";
             header("Location: subscriptions.php");
             exit;
         }
@@ -17,10 +16,16 @@
         $movielist = $statement->fetchAll(PDO::FETCH_ASSOC);
         
         // QUERY RECENTLY ADDED MOVIES
-        $query = "SELECT * FROM movies ORDER BY id DESC";
-        $statement = $conn->prepare($query);
-        $statement->execute();
-        $recentmovielist = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $query2 = "SELECT * FROM movies ORDER BY id DESC";
+        $statement2 = $conn->prepare($query2);
+        $statement2->execute();
+        $recentmovielist = $statement2->fetchAll(PDO::FETCH_ASSOC);
+
+        // QUERY RANDOM MOVIES
+        $query3 = "SELECT * FROM movies ORDER BY RAND() LIMIT 15";
+        $statement3 = $conn->prepare($query3);
+        $statement3->execute();
+        $rdmmovielist = $statement3->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
     <?php foreach(array_slice($recentmovielist, 0) as $movie) { ?>
@@ -88,7 +93,7 @@
         <button class="pre-btn"><img src="style/img/buttons/pre.png" alt=""></button>
         <button class="nxt-btn"><img src="style/img/buttons/nxt.png" alt=""></button>
         <div class="card-container" id="normalmovielist">
-            <?php foreach(array_slice($movielist, 0, 15) as $movie ) {?>
+            <?php foreach(array_slice($rdmmovielist, 0, 15) as $movie ) {?>
                 <?php $id = $movie['id'] ?>
                 <?php if ($movie['genre'] == "action") { ?>
                 <div class="movie-container">
@@ -129,7 +134,7 @@
         <button class="pre-btn"><img src="style/img/buttons/pre.png" alt=""></button>
         <button class="nxt-btn"><img src="style/img/buttons/nxt.png" alt=""></button>
         <div class="card-container" id="normalmovielist">
-            <?php foreach(array_slice($movielist, 0, 15) as $movie ) {?>
+            <?php foreach(array_slice($rdmmovielist, 0, 15) as $movie ) {?>
                 <?php $id = $movie['id'] ?>
                 <?php if ($movie['genre'] == "fantasy") { ?>
                 <div class="movie-container">
@@ -169,7 +174,7 @@
         <button class="pre-btn"><img src="style/img/buttons/pre.png" alt=""></button>
         <button class="nxt-btn"><img src="style/img/buttons/nxt.png" alt=""></button>
         <div class="card-container">
-            <?php foreach(array_slice($movielist, 0, 15) as $movie ) {?>
+            <?php foreach(array_slice($rdmmovielist, 0, 15) as $movie ) {?>
                 <?php $id = $movie['id'] ?>
                 <?php if ($movie['genre'] == "comedy") { ?>
                 <div class="movie-container">

@@ -3,11 +3,11 @@
         require_once 'header.php';
         require_once 'backend/config.php';
 
-        session_start();
-        if(!isset($_SESSION['user_id'])) {
-            header("Location: login/");
-            exit;
-        }
+        // session_start();
+        // if(!isset($_SESSION['user_id'])) {
+        //     header("Location: login/");
+        //     exit;
+        // }
         
         // QUERY MOVIES
         $query = "SELECT * FROM movies";

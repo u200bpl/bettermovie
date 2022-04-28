@@ -5,6 +5,8 @@
     </head>
 <body>   
 <?php
+    session_start(); 
+
     // Query
     require_once 'backend/conn.php';
     $query = "SELECT * FROM movies";
@@ -46,10 +48,15 @@
                     <div class="dropdown">
                         <button onclick="dropDown()" class="dropbtn navicons fa-solid fa-user"></button>
                         <div id="myDropdown" class="dropdown-content">
-                            <a href="<?php echo $base_url; ?>/account/"><i class="navicons fa-solid fa-user"></i> Settings</a>
-                            <a href="<?php echo $base_url; ?>/logout/"><i class="navicons fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
-                            <?php if($users['userrol'] >= 10) { ?>
-                                <a href="<?php echo $base_url; ?>/admin/upload/"><i class="navicons fa-solid fa-arrow-up-from-bracket"></i> Upload</a>
+                            <?php if(!isset($_SESSION['user_id'])) { ?>
+                                <a href="<?php echo $base_url; ?>/login"><i class="navicons fa-solid fa-user"></i> Login</a>
+                                <a href="<?php echo $base_url; ?>/register"><i class="navicons fa-solid fa-user"></i> Register</a>
+                            <?php } else { ?>
+                                <a href="<?php echo $base_url; ?>/account/"><i class="navicons fa-solid fa-user"></i> Settings</a>
+                                <a href="<?php echo $base_url; ?>/logout/"><i class="navicons fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                                <?php if($users['userrol'] >= 10) { ?>
+                                    <a href="<?php echo $base_url; ?>/admin/upload/"><i class="navicons fa-solid fa-arrow-up-from-bracket"></i> Upload</a>
+                                <?php } ?>
                             <?php } ?>
                         </div>
                     </div>

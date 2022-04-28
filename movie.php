@@ -2,12 +2,6 @@
     require_once 'head.php';
     // require_once 'header.php';
     require_once 'backend/config.php';
-
-    session_start();
-    if(!isset($_SESSION['user_id'])) {
-        header("Location: login/");
-        exit;
-    }
 ?>
 
     <?php

@@ -5,7 +5,7 @@
     </head>
 <body>   
 <?php
-    session_start(); 
+    session_start();
 
     // Query
     require_once 'backend/conn.php';
@@ -21,7 +21,6 @@
 ?>
 
 <header>
-    <div class="navbartest">
     <nav>
         <div class="wrapper">
             <div class="navbar">

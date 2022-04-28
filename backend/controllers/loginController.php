@@ -11,15 +11,17 @@ $statement->execute([":username" => $username]);
 $user = $statement->fetch(PDO::FETCH_ASSOC);
 
 if($statement->rowCount() < 1) {
-    die("Error: account bestaat niet");
+    header("Location: ../../login");
+    $msg = "No user found!";
 }
 
 if(!password_verify($password, $user['password'])) {
-    die("Error: wachtwoord onjuist niet");
+    $msg = "No user found!";
+    header("Location: ../../login");
 }
-
-header("location: ../../index.php");
 
 $_SESSION['user_id'] = $user['id'];
 $_SESSION['user_roll'] = $user['userrol'];
+
+header("location: ../../index.php");
 ?>

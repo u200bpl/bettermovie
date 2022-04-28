@@ -2,6 +2,7 @@
     require_once '../backend/config.php';
 	require_once '../head.php';
 
+	session_start();
     if(isset($_SESSION['user_id'])){
         header("location: ../../index.php");
     }

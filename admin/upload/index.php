@@ -2,6 +2,11 @@
     require_once '../../header.php';
     require_once '../../backend/config.php';
 
+    // session_start();
+    // if($_SESSION['user_rol'] < 10) {
+    //     header("location: ../../index.php");
+    // }
+
     // Query
     require_once '../../backend/conn.php';
     $query = "SELECT * FROM movies";

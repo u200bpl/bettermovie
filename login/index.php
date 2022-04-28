@@ -15,14 +15,6 @@
 				<i class="fas fa-lock"></i>
 			</label>
 			<input type="password" name="password" placeholder="Password" id="password" required>
-			<div class="error">
-				<?php
-				if(isset($_SESSION["msg"])) {
-					$msg = $_SESSION["msg"];
-				}
-				?>
-				<p><span>ERROR: </span> <?php echo $msg ?></p>
-			</div>
 			<input type="submit" value="Login">
 		</form>
 	</div>

@@ -2,12 +2,6 @@
     require_once '../../header.php';
     require_once '../../backend/config.php';
 
-    session_start();
-    if(!$_SESSION['userrol'] < 10) {
-        header("Location: ../../index.php");
-        exit;
-    }
-
     // Query
     require_once '../../backend/conn.php';
     $query = "SELECT * FROM movies";
@@ -36,17 +30,18 @@
 
             <div class="form-group">
                 <label for="dur">Duration:</label><br>
-                <input type="text" id="dur" name="dur" placeholder="116">
+                <input type="number" id="dur" name="dur" placeholder="116">
             </div>
 
             <div class="form-group">
                 <label for="banner">Banner:</label><br>
                 <input type="text" id="banner" name="banner" placeholder="uncharted">
+                <!-- <input type="file" id="banner" name="banner" placeholder="uncharted"> -->
             </div>
 
             <div class="form-group">
                 <label for="year">Release Year:</label><br>
-                <input type="text" id="year" name="year" placeholder="2022">
+                <input type="number" id="year" name="year" placeholder="2022">
             </div>
 
             <div class="form-group">

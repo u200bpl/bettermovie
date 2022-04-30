@@ -11,13 +11,15 @@ $statement->execute([":username" => $username]);
 $user = $statement->fetch(PDO::FETCH_ASSOC);
 
 if($statement->rowCount() < 1) {
-    header("Location: ../../login");
-    $msg = "No user found!";
+    $msg = "Username not fount!";
+    header("location: ../../login/index.php?msg=$msg");
+    exit;
 }
 
 if(!password_verify($password, $user['password'])) {
-    $msg = "No user found!";
-    header("Location: ../../login");
+    $msg = "Password not fount!";
+    header("location: ../../login/index.php?msg=$msg");
+    exit;
 }
 
 $_SESSION['user_id'] = $user['id'];

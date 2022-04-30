@@ -2,17 +2,16 @@
     require_once '../../header.php';
     require_once '../../backend/config.php';
 
-    // session_start();
-    // if($_SESSION['user_rol'] < 10) {
-    //     header("location: ../../index.php");
-    // }
-
-    // Query
     require_once '../../backend/conn.php';
-    $query = "SELECT * FROM movies";
+    $query = "SELECT * FROM users";
     $statement = $conn->prepare($query);
     $statement->execute();
-    $movielist = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $users = $statement->fetch(PDO::FETCH_ASSOC);
+
+    session_start();
+    if($users['userrol'] < 10) {
+        header("location: ../../index.php");
+    }
 ?>
 
 <div class="upload">
@@ -64,6 +63,10 @@
                 <input type="text" id="quality" name="quality" placeholder="SD">
             </div>
         </div>
+
+        <?PHP if(isset($_GET['msg'])) {
+	        echo "<div class='error'><span>ERROR: </span>" .$_GET['msg']. "</div>";
+		} ?>
 
         <div class="addbtn">
             <input type="submit" value="Add movie">

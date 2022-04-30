@@ -7,14 +7,16 @@
 <main>
 	<div class="login">
 		<form action="../backend/controllers/loginController.php" method="post">
-			<label for="username">
-				<i class="fas fa-user"></i>
-			</label>
+			<label for="username"><i class="fas fa-user"></i></label>
 			<input type="text" name="username" placeholder="Username" id="username" required>
-			<label for="password">
-				<i class="fas fa-lock"></i>
-			</label>
+			
+			<label for="password"><i class="fas fa-lock"></i></label>
 			<input type="password" name="password" placeholder="Password" id="password" required>
+			
+			<?PHP if(isset($_GET['msg'])) {
+	            echo "<div class='error'><span>ERROR: </span>" .$_GET['msg']. "</div>";
+			} ?>
+			
 			<input type="submit" value="Login">
 		</form>
 	</div>

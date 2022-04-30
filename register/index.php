@@ -12,20 +12,21 @@
 <main>
 	<div class="login">
 		<form action="../backend/controllers/registerController.php" method="post">
-			<label for="username">
-				<i class="fas fa-user"></i>
-			</label>
+			<label for="username"><i class="fas fa-user"></i></label>
 			<input type="text" name="username" placeholder="Username" id="username" required>
 
-            <label for="email">
-                <i class="fa-solid fa-envelope"></i>
-			</label>
+            <label for="email"><i class="fa-solid fa-envelope"></i></label>
 			<input type="text" name="email" placeholder="E-mail" id="email" required>
 
-			<label for="password">
-				<i class="fas fa-lock"></i>
-			</label>
+			<label for="password"><i class="fas fa-lock"></i></label>
 			<input type="password" name="password" placeholder="Password" id="password" required>
+
+			<label for="passwordRetry"><i class="fas fa-lock"></i></label>
+			<input type="password" name="passwordRetry" placeholder="Password" id="passwordRetry" required>
+
+	        <?PHP if(isset($_GET['msg'])) {
+	            echo "<div class='error'><span>ERROR: </span>" .$_GET['msg']. "</div>";
+			} ?>
 
 			<input type="submit" value="Register">
 		</form>

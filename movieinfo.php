@@ -35,3 +35,5 @@
         </section>
     <?php endforeach; ?>
 </header>
+
+<?php require_once 'footer.php' ?>

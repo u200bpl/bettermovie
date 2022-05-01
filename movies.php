@@ -2,6 +2,7 @@
         require_once 'head.php';
         require_once 'header.php';
         require_once 'backend/config.php';
+        
         // QUERY MOVIES
         $query = "SELECT * FROM movies ORDER BY RAND() LIMIT 250";
         $statement = $conn->prepare($query);

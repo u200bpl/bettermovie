@@ -4,7 +4,7 @@
 	require_once '../head.php';
 
     if(isset($_SESSION['user_id'])){
-        header("location: ../../index.php");
+        header("location: ../index.php");
     }
 ?>
 </header>
@@ -30,6 +30,10 @@
 
 			<input type="submit" value="Register">
 		</form>
+		
+		<div class="already">
+			<p>Already has a account? <a href="../login/">Login here</a></p>
+		</div>
 	</div>
 </main>
 

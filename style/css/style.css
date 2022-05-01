@@ -398,6 +398,21 @@ nav {
 /*             */
 /* LOGIN POAGE */
 /*             */
+.already {
+    margin: 10px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.already a {
+    text-decoration: underline;
+    color: var(--white);
+}
+
+.already a:hover {
+    text-decoration: none;
+}
+
 .login {
     width: 400px;
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);

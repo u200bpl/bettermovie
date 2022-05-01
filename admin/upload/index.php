@@ -8,7 +8,6 @@
     $statement->execute();
     $users = $statement->fetch(PDO::FETCH_ASSOC);
 
-    session_start();
     if($users['userrol'] < 10) {
         header("location: ../../index.php");
     }

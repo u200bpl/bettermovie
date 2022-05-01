@@ -1,8 +1,8 @@
 <?php
     require_once '../backend/config.php';
+	require_once '../header.php';
 	require_once '../head.php';
 
-	session_start();
     if(isset($_SESSION['user_id'])){
         header("location: ../../index.php");
     }
@@ -33,4 +33,4 @@
 	</div>
 </main>
 
-<!-- <?php include 'layout/footer.php' ?> -->
+<?php require_once '../footer.php'; ?>

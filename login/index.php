@@ -1,5 +1,6 @@
 <?php
     require_once '../backend/config.php';
+	require_once '../header.php';
 	require_once '../head.php';
 ?>
 </header>
@@ -22,4 +23,4 @@
 	</div>
 </main>
 
-<!-- <?php include 'layout/footer.php' ?> -->
+<?php require_once '../footer.php'; ?>

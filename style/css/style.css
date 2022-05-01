@@ -99,6 +99,7 @@ body {
 /*        */
 nav {
     position: fixed;
+    top: 0;
     background-color: rgba(var(--black-rgb), 0.5);
     color: var(--white);
     width: 100%;

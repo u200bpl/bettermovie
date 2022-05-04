@@ -1,6 +1,5 @@
 <?php
     require_once 'head.php';
-    require_once 'header.php';
     require_once 'backend/config.php';
 ?>
 
@@ -20,5 +19,6 @@
     <div class="movieoverlay">
         <a href="index.php"><i class="test fa-solid fa-angles-left"></i> Go back</a>
     </div>
-    <iframe src="https://databasegdriveplayer.co/player.php?imdb=<?php echo $movie['iframe']; ?>" controls="0" frameborder="0" width="100%" height="100%" allowfullscreen="1"> </iframe>
+    <script src="https://cdn.jwplayer.com/players/<?php echo $movie['iframe']; ?>-CBzeQuz6.js"></script>
+    <!-- <iframe src="https://databasegdriveplayer.co/player.php?imdb=<?php echo $movie['iframe']; ?>" controls="0" frameborder="0" width="100%" height="100%" allowfullscreen="1"> </iframe> -->
 <?php endforeach; ?>

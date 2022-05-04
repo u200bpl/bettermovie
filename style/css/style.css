@@ -584,3 +584,10 @@ nav {
     display: flex;
     flex-wrap: wrap;
 }
+
+/*               */
+/* MOVIE PLAYERR */
+/*               */
+.player {
+    height: 10px;
+}

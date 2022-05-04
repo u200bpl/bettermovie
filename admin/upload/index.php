@@ -54,7 +54,7 @@
             </div>
 
             <div class="form-group">
-                <label for="iframe">Iframe:</label><br>
+                <label for="iframe">Media ID:</label><br>
                 <input type="text" id="iframe" name="iframe" placeholder="tt1464335">
             </div>
 

@@ -29,7 +29,7 @@
 
             <div class="form-group">
                 <label for="genre">Genre:</label><br>
-                <input type="text" id="genre" name="genre" placeholder="action">
+                <input type="text" id="genre" name="genre" placeholder="action, comedy, horror">
             </div>
 
             <div class="form-group">

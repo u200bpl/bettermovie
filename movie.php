@@ -16,10 +16,12 @@
 </header>
 
 <?php foreach($movielist as $movie): ?>
-    <!-- <div class="movieoverlay">
-        <a href="index.php"><i class="test fa-solid fa-angles-left"></i> Go back</a>
-    </div> -->
-    <script src="https://cdn.jwplayer.com/players/<?php echo $movie['iframe']; ?>-CBzeQuz6.js"></script>
-
-    <!-- <iframe src="https://databasegdriveplayer.co/player.php?imdb=<?php echo $movie['iframe']; ?>" controls="0" frameborder="0" width="100%" height="100%" allowfullscreen="1"> </iframe> -->
+    <div class="movieoverlay">
+        <a href="index.php"><i class="test fa-solid fa-angles-left"></i> <?php echo $movie['title']; ?></a>
+    </div>
+    <div>
+        <div class="moviesection">
+            <iframe src="https://databasegdriveplayer.co/player.php?imdb=<?php echo $movie['iframe']; ?>" controls="0" frameborder="0" allowfullscreen="1"></iframe>
+        </div>
+    </div>
 <?php endforeach; ?>

@@ -379,21 +379,7 @@ nav {
     align-items: center;
 }
 
-.movieoverlay {
-    position: absolute;
-    margin: 15px;
-    text-align: center;
-}
 
-.movieoverlay a {
-    color: white;
-    font-size: 28px;
-    text-decoration: none;
-}
-
-.test {
-    font-size: 32px;
-}
 
 /*             */
 /* LOGIN POAGE */
@@ -585,6 +571,24 @@ nav {
     flex-wrap: wrap;
 }
 
-/*               */
-/* MOVIE PLAYERR */
-/*               */
+/*              */
+/* MOVIE PLAYER */
+/*              */
+.movieoverlay {
+    position: absolute;
+    margin: 15px;
+    text-align: center;
+    z-index: 1;
+}
+
+.movieoverlay a {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.moviesection iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}

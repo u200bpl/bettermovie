@@ -14,6 +14,35 @@
 
 <main>
     <div class="spacer"></div>
+    <!-- 2022 -->
+    <div class="wrapper">
+        <div class="rowstitel">
+            <h4>Grand Prix 2022</h4>
+        </div>
+    </div>
+
+    <div class="movie-list">
+        <button class="pre-btn"><img src="<?php echo $base_url; ?>/style/img/buttons/pre.png" alt=""></button>
+        <button class="nxt-btn"><img src="<?php echo $base_url; ?>/style/img/buttons/nxt.png" alt=""></button>
+        <div class="card-container">
+            <?php foreach($movielist as $movie) {?>
+                <?php $id = $movie['id'] ?>
+                <?php if ($movie['year'] == "2022") { ?>
+                <div class="movie-container">
+                    <div class="movie-list">
+                        <a href="watch.php?id=<?php echo $id;?>"><img src="<?php echo $base_url; ?>/style/img/f1/<?php echo $movie['country']; ?>.jpg" alt="<?php echo $movie['country']; ?> img banner"></a>
+                        <div class="overlay">                                        
+                            <div class="sct-center">
+                                <p>Formula 1 <?php echo $movie['year']; ?> <?php echo $movie['country']; ?> Grand Prix</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            <?php } ?>
+        </div>
+    </div>
+
     <!-- 2021 -->
     <div class="wrapper">
         <div class="rowstitel">

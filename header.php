@@ -21,8 +21,15 @@
                 <div class="navleft">
                     <a href="<?php echo $base_url; ?>/index.php"><h1><span>Better</span>movie</h1></a>
                     <a href="<?php echo $base_url; ?>/index.php">Homepage</a>
-                    <a href="<?php echo $base_url; ?>/movies.php">Movies</a>
+                    <a href="<?php echo $base_url; ?>/movie">Movies</a>
                     <a href="">Series</a>
+                    <div class="dropdown">
+                        <button onclick="dropDown1()" class="dropbtn">Formule</button>
+                        <div id="myDropdown1" class="dropdown-content">
+                            <a href="<?php echo $base_url; ?>/f1">Formule 1</a>
+                            <a href="<?php echo $base_url; ?>/f2">Formule 2</a>
+                        </div>
+                    </div>
                     <!-- <a href="">My list</a> -->
                 </div>
 
@@ -39,8 +46,8 @@
                     <a href="#"><i class="navicons fa-solid fa-bell"></i></a>                    
                     
                     <div class="dropdown">
-                        <button onclick="dropDown()" class="dropbtn navicons fa-solid fa-user"></button>
-                        <div id="myDropdown" class="dropdown-content">
+                        <button onclick="dropDown2()" class="dropbtn navicons fa-solid fa-user"></button>
+                        <div id="myDropdown2" class="dropdown-content">
                             <?php if(!isset($_SESSION['user_id'])) { ?>
                                 <a href="<?php echo $base_url; ?>/login"><i class="navicons fa-solid fa-user"></i> Login</a>
                                 <a href="<?php echo $base_url; ?>/register"><i class="navicons fa-solid fa-user"></i> Register</a>

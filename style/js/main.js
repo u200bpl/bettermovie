@@ -13,8 +13,12 @@ function activateSearch() {
 //--------------------------------------------------------------------------------
 // DROP DOWN MENU
 
-function dropDown() {
-    document.getElementById("myDropdown").classList.toggle("show");
+function dropDown1() {
+    document.getElementById("myDropdown1").classList.toggle("show");
+}
+
+function dropDown2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
 }
   
 // Close the dropdown if the user clicks outside of it

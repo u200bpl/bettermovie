@@ -23,7 +23,6 @@
                     <div class="info-btn">
                         <a href="watch.php?id=<?php echo $id;?>"><i class="fa-solid fa-video"></i> Watch movie</a>
                         <a href="https://www.youtube.com/watch?v=<?php echo $movie['trailer']; ?>"><i class="fa-solid fa-clapperboard"></i> Trailer</a>
-                        <a><?php echo $movie['quality']; ?></a>
                     </div>
 
                     <div class="description"><p><?php echo $movie['description']; ?></p></div>
@@ -36,4 +35,4 @@
     <?php endforeach; ?>
 </header>
 
-<?php require_once 'footer.php' ?>
+<?php require_once '../footer.php' ?>

@@ -25,9 +25,9 @@ CREATE TABLE IF NOT EXISTS `f1` (
   `country` varchar(255) DEFAULT NULL,
   `iframe` varchar(255) DEFAULT NULL,
   KEY `ID` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=130 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table bettermovie.f1: ~100 rows (approximately)
+-- Dumping data for table bettermovie.f1: ~122 rows (approximately)
 /*!40000 ALTER TABLE `f1` DISABLE KEYS */;
 INSERT INTO `f1` (`id`, `year`, `quantity`, `country`, `iframe`) VALUES
 	(1, 2016, '1', 'Australia', '2570373106275'),
@@ -129,7 +129,36 @@ INSERT INTO `f1` (`id`, `year`, `quantity`, `country`, `iframe`) VALUES
 	(97, 2020, '14', 'Turkey', '2562058422883'),
 	(98, 2020, '15', 'Bahrain', '2562058488419'),
 	(99, 2020, '16', 'Sakhir', '2562058619491'),
-	(100, 2020, '17', 'Abu Dhabi', '2562058553955');
+	(100, 2020, '17', 'Abu Dhabi', '2562058553955'),
+	(101, 2021, '1', 'Bahrain', '2054321146404'),
+	(102, 2021, '2', 'Emilia Romagna', '2342645271209'),
+	(103, 2021, '3', 'Portugal', '2501074356835'),
+	(104, 2021, '4', 'Spain', '2395721566889'),
+	(105, 2021, '5', 'Monaco', '2184179485220'),
+	(106, 2021, '6', 'Azerbaijan', '2216425228836'),
+	(107, 2021, '7', 'France', '2501291084387'),
+	(108, 2021, '8', 'Styria', '2501215390307'),
+	(109, 2021, '9', 'Austria', '2464516147751'),
+	(110, 2021, '10', 'Great Britain', '2501078354531'),
+	(111, 2021, '11', 'Hungary', '2501215849059'),
+	(112, 2021, '12', 'Belgium', '2661029710505'),
+	(113, 2021, '13', 'Netherlands', '2674305141417'),
+	(114, 2021, '14', 'Italy', '3532184226473'),
+	(115, 2021, '15', 'Russia', '2729570536105'),
+	(116, 2021, '16', 'Turkey', '3053718145556'),
+	(117, 2021, '17', 'United States', '2816979569321'),
+	(118, 2021, '18', 'Mexico', '3106171390484'),
+	(119, 2021, '19', 'Brazil', '2887893191337'),
+	(120, 2021, '20', 'Qatar', '2921811806889'),
+	(121, 2021, '21', 'Saudi Arabia', '3022501841577'),
+	(122, 2021, '22', 'Abu Dhabi', '3098253331113'),
+	(123, 2022, '1', 'Bahrain', NULL),
+	(124, 2022, '2', 'Saudi Arabia', NULL),
+	(125, 2022, '3', 'Australia', '3498137553577'),
+	(126, 2022, '4', 'Emilia Romagna', '3532965546665'),
+	(127, 2022, '5', 'Miami', '3562424044201'),
+	(128, 2022, '6', 'Spain', NULL),
+	(129, 2022, '7', 'Monaco', NULL);
 /*!40000 ALTER TABLE `f1` ENABLE KEYS */;
 
 -- Dumping structure for table bettermovie.movies
@@ -138,6 +167,7 @@ CREATE TABLE IF NOT EXISTS `movies` (
   `title` varchar(256) NOT NULL,
   `description` varchar(500) DEFAULT NULL,
   `genre` varchar(256) NOT NULL,
+  `duration` int(11) DEFAULT NULL,
   `banner` varchar(256) NOT NULL,
   `year` varchar(256) NOT NULL,
   `trailer` text DEFAULT NULL,
@@ -147,17 +177,17 @@ CREATE TABLE IF NOT EXISTS `movies` (
 
 -- Dumping data for table bettermovie.movies: ~10 rows (approximately)
 /*!40000 ALTER TABLE `movies` DISABLE KEYS */;
-INSERT INTO `movies` (`id`, `title`, `description`, `genre`, `banner`, `year`, `trailer`, `iframe`) VALUES
-	(1, 'Free Guy', 'In Free Guy, a bank teller who discovers he is actually a background player in an open-world video game, decides to become the hero of his own story...', 'action', 'freeguy', '2021', 'X2m-08cOAbc', 'tt6264654'),
-	(2, 'Iron Man', 'After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.', 'action', 'ironman', '2008', '8ugaeA-nMTc', 'tt0371746'),
-	(3, 'Iron Man 2', 'When Tony Stark\'s world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.', 'action', 'ironman2', '2010', 'BoohRoVA9WQ', 'tt1228705'),
-	(4, 'Iron Man 3', 'With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father\'s legacy.', 'action', 'ironman3', '2013', 'Ke1Y3P9D0Bc', 'tt1300854'),
-	(5, 'Spider-Man: No Way Home', 'With Spider-Man\'s identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.', 'action', 'spidermannowayhome', '2021', 'JfVOs4VSpmA', 'tt10872600'),
-	(6, 'Scream', '25 years after a streak of brutal murders shocked the quiet town of Woodsboro, Calif., a new killer dons the Ghostface mask and begins targeting a group of teenagers to resurrect secrets from the town\'s deadly past.', 'horror', 'scream', '2022', NULL, 'tt11245972'),
-	(7, '9 Bullets', 'A former burlesque dancer turned author discovers a second chance at life and redemption when she risks everything to rescue her young neighbor after he witnesses his parents\' murder. Now on the run from the local crime boss, who happens to be her longtime ex, she makes a desperate attempt to get the boy to safety.', 'action', '9bullets', '2022', NULL, 'tt13680520'),
-	(8, 'Sonic The Hedgehog', 'An extraterrestrial hedgehog is discovered by a scientist with evil intentions and plans to use his superpowers for his selfish needs.', 'adventure', 'sonicthehedgehog', '2020', NULL, 'tt3794354'),
-	(9, 'Uncharted', 'Victor Sullivan recruits Nathan Drake to help him find the lost fortune of Ferdinand Magellan. However, they face competition from Santiago Moncada, who believes that the treasure belongs to him.', 'adventure', 'uncharted', '2022', NULL, 'tt1464335'),
-	(10, 'Sonic The Hedgehog 2', 'After settling in Green Hills, Sonic is eager to prove that he has what it takes to be a true hero. His test comes when Dr. Robotnik returns with a new partner, Knuckles, in search of a mystical emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.', 'adventure', 'sonicthehedgehog2', '2023', NULL, 'tt12412888');
+INSERT INTO `movies` (`id`, `title`, `description`, `genre`, `duration`, `banner`, `year`, `trailer`, `iframe`) VALUES
+	(1, 'Free Guy', 'In Free Guy, a bank teller who discovers he is actually a background player in an open-world video game, decides to become the hero of his own story...', 'action', NULL, 'freeguy', '2021', 'X2m-08cOAbc', 'tt6264654'),
+	(2, 'Iron Man', 'After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.', 'action', NULL, 'ironman', '2008', '8ugaeA-nMTc', 'tt0371746'),
+	(3, 'Iron Man 2', 'When Tony Stark\'s world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.', 'action', NULL, 'ironman2', '2010', 'BoohRoVA9WQ', 'tt1228705'),
+	(4, 'Iron Man 3', 'With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father\'s legacy.', 'action', NULL, 'ironman3', '2013', 'Ke1Y3P9D0Bc', 'tt1300854'),
+	(5, 'Spider-Man: No Way Home', 'With Spider-Man\'s identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.', 'action', NULL, 'spidermannowayhome', '2021', 'JfVOs4VSpmA', 'tt10872600'),
+	(6, 'Scream', '25 years after a streak of brutal murders shocked the quiet town of Woodsboro, Calif., a new killer dons the Ghostface mask and begins targeting a group of teenagers to resurrect secrets from the town\'s deadly past.', 'horror', NULL, 'scream', '2022', NULL, 'tt11245972'),
+	(7, '9 Bullets', 'A former burlesque dancer turned author discovers a second chance at life and redemption when she risks everything to rescue her young neighbor after he witnesses his parents\' murder. Now on the run from the local crime boss, who happens to be her longtime ex, she makes a desperate attempt to get the boy to safety.', 'action', NULL, '9bullets', '2022', NULL, 'tt13680520'),
+	(8, 'Sonic The Hedgehog', 'An extraterrestrial hedgehog is discovered by a scientist with evil intentions and plans to use his superpowers for his selfish needs.', 'adventure', NULL, 'sonicthehedgehog', '2020', NULL, 'tt3794354'),
+	(9, 'Uncharted', 'Victor Sullivan recruits Nathan Drake to help him find the lost fortune of Ferdinand Magellan. However, they face competition from Santiago Moncada, who believes that the treasure belongs to him.', 'adventure', NULL, 'uncharted', '2022', NULL, 'tt1464335'),
+	(10, 'Sonic The Hedgehog 2', 'After settling in Green Hills, Sonic is eager to prove that he has what it takes to be a true hero. His test comes when Dr. Robotnik returns with a new partner, Knuckles, in search of a mystical emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.', 'adventure', NULL, 'sonicthehedgehog2', '2023', NULL, 'tt12412888');
 /*!40000 ALTER TABLE `movies` ENABLE KEYS */;
 
 -- Dumping structure for table bettermovie.users
@@ -178,7 +208,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   KEY `id` (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table bettermovie.users: ~1 rows (approximately)
+-- Dumping data for table bettermovie.users: ~0 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `username`, `email`, `fname`, `lname`, `password`, `address`, `hnumber`, `zipcode`, `phonenumber`, `city`, `country`, `userrol`) VALUES
 	(1, 'u200b', 'u200b@doverman.nl', 'Dennis', 'Overman', '$2y$10$xVpR2RYOKvlWtC401St2HuldqX6ecRxq54ZcGa1Wsy8qpfM4Ary0O', 'Benthuizenstraat', 27, '5043at', 639620036, 'Tilburg', 'Netherlands', 10);

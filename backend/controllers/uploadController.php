@@ -56,16 +56,9 @@ if ($iframe == null) {
     exit;
 }
 
-$quality = $_POST['quality'];
-if ($quality == null) {
-    $msg = "Quality is empty!";
-    header("location: ../../admin/upload/index.php?msg=$msg");
-    exit;
-}
-
 require_once '../conn.php';
-$query = "INSERT INTO movies (title, description, genre, duration, banner, year, trailer, iframe, quality) 
-VALUES (:title, :description, :genre, :duration, :banner, :year, :trailer, :iframe, :quality)";
+$query = "INSERT INTO movies (title, description, genre, duration, banner, year, trailer, iframe) 
+VALUES (:title, :description, :genre, :duration, :banner, :year, :trailer, :iframe)";
 $statement = $conn->prepare($query);
 $statement->execute([
     ":title" => $title,
@@ -76,7 +69,6 @@ $statement->execute([
     ":year" => $year,
     ":trailer" => $trailer,
     ":iframe" => $iframe,
-    ":quality" => $quality
 ]);
 
 header("location: ../../index.php?msg=Movie has been saved");

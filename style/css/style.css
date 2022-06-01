@@ -65,6 +65,11 @@ body {
     padding: 250px;
 }
 
+.heroinformation p {
+    max-height: 175px;
+    overflow: hidden;
+}
+
 .heroinformation img {
     width: 550px;
 }
@@ -221,7 +226,175 @@ nav {
     text-decoration: none;
     display: block;
 }
+
+/* MOVIE DROPDOWN */
+.dropbtn2 {
+    background: none;
+    color: var(--white);
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px 0 0;
+
+}
   
+.dropdown2 {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: rgba(var(--black-rgb), 0.5);
+    color: var(--white);
+    min-width: 670px;
+    overflow: auto;
+    top: 41px;
+}
+  
+.dropdown-content2 a {
+    color: var(--white);
+    padding: 3px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content2 h5 {
+    color: var(--white);
+    margin: 5px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid var(--yellow);
+    max-width: 75px;
+}
+
+.drop2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.droptext2 {
+    text-align: start;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* SERIE DROPDOWN */
+.dropbtn3 {
+    background: none;
+    color: var(--white);
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px 0 0;
+
+}
+  
+.dropdown3 {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content3 {
+    display: none;
+    position: absolute;
+    background-color: rgba(var(--black-rgb), 0.5);
+    color: var(--white);
+    min-width: 550px;
+    overflow: auto;
+    top: 41px;
+}
+  
+.dropdown-content3 a {
+    color: var(--white);
+    padding: 3px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content3 h5 {
+    color: var(--white);
+    margin: 5px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid var(--yellow);
+    max-width: 75px;
+}
+
+.drop3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.droptext3 {
+    text-align: start;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* SPORT DROPDOWN */
+.dropbtn4 {
+    background: none;
+    color: var(--white);
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px 0 0;
+
+}
+  
+.dropdown4 {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content4 {
+    display: none;
+    position: absolute;
+    background-color: rgba(var(--black-rgb), 0.5);
+    color: var(--white);
+    min-width: 350px;
+    overflow: auto;
+    top: 41px;
+}
+  
+.dropdown-content4 a {
+    color: var(--white);
+    padding: 3px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content4 h5 {
+    color: var(--white);
+    margin: 5px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid var(--yellow);
+    max-width: 75px;
+}
+
+.drop {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.dropsection {
+    text-align: center;
+}
+
+.droptext {
+    text-align: start;
+}
+
 .show {display: block;}
 
 /*               */
@@ -292,15 +465,6 @@ nav {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-}
-
-.quality {
-    top: 3%;
-    left: 92%;
-    position: absolute;
-    background: var(--yellow);
-    padding: 7px 12px;
-    border-radius: 3px;
 }
 
 .card-container {

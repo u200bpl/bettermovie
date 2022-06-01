@@ -25,7 +25,7 @@
     <?php foreach(array_slice($recentmovielist, 0) as $movie) { ?>
         <section class="hero" style="background-image: url(style/img/movies/<?php echo $movie['banner']; ?>.jpg);">
             <div class="heroinformation">
-            <img src="style/img/logos/<?php echo $movie['banner']; ?>-logo.png" alt="<?php echo $movie['title']; ?> img banner">
+                <img src="style/img/logos/<?php echo $movie['banner']; ?>-logo.png" alt="<?php echo $movie['title']; ?> img banner">
                 <p><?php echo $movie['description']; ?></p>
                 <a class="btn" href="movie/watch.php?id=<?php echo $movie['id']; ?>"><i class="heroicon fa-solid fa-video"></i> Play</a>
                 <a class="btn" href="movie/movieinfo.php?id=<?php echo $movie['id']; ?>"><i class="heroicon fa-solid fa-circle-info"></i> Information</a>
@@ -52,7 +52,6 @@
                 <?php $id = $movie['id'] ?>
                 <div class="movie-container">
                     <div class="movie-list">
-                        <!-- <div class="quality"><p><?php echo $movie['quality']; ?></p></div> -->
                         <a href="movie/watch.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
                         <div class="overlay">
                             <div class="sct-left">

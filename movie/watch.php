@@ -17,13 +17,21 @@
 
 <main>
     <?php foreach($movielist as $movie): ?>
-        <div class="movieoverlay">
-            <a href="<?php echo $base_url; ?>/movie/index.php"><i class="test fa-solid fa-angles-left"></i> <?php echo $movie['title']; ?></a>
-        </div>
-        <div>
-            <div class="moviesection">
-                <iframe src="https://databasegdriveplayer.co/player.php?imdb=<?php echo $movie['iframe']; ?>" controls="0" frameborder="0" allowfullscreen="1"></iframe>
+        <?php If (empty($movie['iframe'])) { ?>
+            <div class="videoerror">
+                <p>THIS VIDEO IS UNAVAIBLE</p>
+                <a href="<?php echo $base_url; ?>/movie">Go back</a>
             </div>
-        </div>
+        <?php } else { ?>
+            <div class="movieoverlay">
+                <a href="<?php echo $base_url; ?>/movie"><i class="test fa-solid fa-angles-left"></i> <?php echo $movie['title']; ?></a>
+            </div>
+
+            <div>
+                <div class="moviesection">
+                    <iframe src="https://databasegdriveplayer.co/player.php?imdb=<?php echo $movie['iframe']; ?>" controls="0" frameborder="0" allowfullscreen="1"></iframe>
+                </div>
+            </div>
+        <?php } ?>
     <?php endforeach; ?>
 </main>

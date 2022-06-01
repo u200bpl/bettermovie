@@ -17,15 +17,23 @@
 
 <main>
     <?php foreach($movielist as $movie): ?>
-        <div class="movieoverlay">
-            <a href="<?php echo $base_url; ?>/f1"><i class="test fa-solid fa-angles-left"></i> Formula 1 <?php echo $movie['year']; ?> <?php echo $movie['country']; ?> Grand Prix</a>
-        </div>
-
-        <div>
-            <div class="moviesection">
-                <iframe src="//ok.ru/videoembed/<?php echo $movie['iframe']; ?>" controls="0" frameborder="0" allowfullscreen="1"></iframe>
+        <?php If (empty($movie['iframe'])) { ?>
+            <div class="videoerror">
+                <p>THIS VIDEO IS UNAVAIBLE</p>
+                <a href="<?php echo $base_url; ?>/f1">Go back</a>
             </div>
-        </div>
+        <?php } else { ?>
+            <div class="movieoverlay">
+                <a href="<?php echo $base_url; ?>/f1"><i class="test fa-solid fa-angles-left"></i> Formula 1 <?php echo $movie['year']; ?> <?php echo $movie['country']; ?> Grand Prix</a>
+            </div>
+
+            <div>
+                <div class="moviesection">
+                    <!-- <iframe src="//ok.ru/videoembed/<?php echo $movie['iframe']; ?>" controls="0" frameborder="0" allowfullscreen="1"></iframe> -->
+                    <div><iframe src="//f1livegp.me/f1/live.php" allow="encrypted-media" width="100%" height="100%" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowfullscreen="yes"></iframe></div>
+                </div>
+            </div>
+        <?php } ?>
     <?php endforeach; ?>
 </main>
 

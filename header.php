@@ -98,10 +98,10 @@
                                     <h5>Formula</h5>
                                     <div class="droptext">
                                         <a href="<?php echo $base_url; ?>/f1">Formula 1</a>
-                                        <a href="<?php echo $base_url; ?>/f1">Formula 2</a>
-                                        <a href="<?php echo $base_url; ?>/f1">Formula 3</a>
-                                        <a href="<?php echo $base_url; ?>/f1">Formula E</a>
-                                        <a href="<?php echo $base_url; ?>/f1">Indy 500</a>    
+                                        <a href="<?php echo $base_url; ?>/f2">Formula 2</a>
+                                        <a href="<?php echo $base_url; ?>/f31">Formula 3</a>
+                                        <a href="<?php echo $base_url; ?>/fe">Formula E</a>
+                                        <a href="<?php echo $base_url; ?>/indy">Indy 500</a>   
                                     </div>
                                 </div>
                                 

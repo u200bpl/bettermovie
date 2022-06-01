@@ -10,6 +10,14 @@
         $statement->execute();
         $movielist = $statement->fetchAll(PDO::FETCH_ASSOC);
     ?>
+
+    <section class="hero" style="background-image: url(<?php echo $base_url; ?>/style/img/f1/race1.jpg);">
+        <div class="liveinformation">
+            <div class="countdown">
+                <p id="demo"></p>    
+            </div>
+        </div>
+    </section>
 </header>
 
 <main>

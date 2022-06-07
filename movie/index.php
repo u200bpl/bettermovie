@@ -34,7 +34,7 @@
             <?php foreach(array_slice($movielist, 0, 250) as $movie ) {?>
                 <?php $id = $movie['id'] ?>
                 <div class="movie-container">
-                    <div class="movies-list">
+                    <div class="movies-lists">
                         <a href="movieinfo.php?id=<?php echo $id;?>"><img src="<?php echo $base_url; ?>/style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
                         <div class="overlay">
                             <div class="sct-left">

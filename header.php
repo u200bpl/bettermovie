@@ -28,8 +28,8 @@
                                 <div class="dropsection">
                                     <h5>Collection</h5>
                                     <div class="droptext2">
-                                        <a href="<?php echo $base_url; ?>/movie">Marvel</a>
-                                        <a href="<?php echo $base_url; ?>/movie">Harry Potter</a>
+                                        <a href="<?php echo $base_url; ?>/movie/collection/marvel.php">Marvel</a>
+                                        <a href="<?php echo $base_url; ?>/movie/collection/disney.php">Disney</a>
                                     </div>
                                 </div>
 

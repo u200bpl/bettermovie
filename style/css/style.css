@@ -1053,4 +1053,40 @@ ul.countdown li p {
     }
     
     .show {display: block;}
+
+    .moviehero {
+        height: 665px;
+    }
+
+    .info-btn {
+        margin: 10px 0;
+    }
+    
+    .info-btn a {
+        font-size: 21px;
+    }
+
+    .info-btn i {
+        font-size: 21px;
+    }
+
+    .sectioninfo span {
+        font-size: 21px;
+    }
+
+    .sectioninfo p {
+        font-size: 21px;
+    }
+    
+    .sectioninfo h5 {
+        font-size: 21px;
+    }
+
+    .movies-list {
+        justify-content: center;
+    }
+
+    .movies-list img {
+        margin: -70px;
+    }
 }

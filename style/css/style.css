@@ -826,6 +826,29 @@ ul.countdown li p {
 /*               */
 /* 1440P SCREENS */
 /*               */
+@media only screen and (min-width: 1080px) {
+    .hero {
+        height: 720px;
+    }
+    
+    .heroinformation {
+        width: 400px;
+        padding: 175px;
+    }
+
+    .heroinformation p {
+        font-size: 21px;
+    }
+
+    .heroinformation img {
+        width: 450px;
+    }
+
+    .btn {
+        padding: 2px 20px;
+    }
+}
+
 @media only screen and (min-width: 2560px) {
     .hero {
         height: 1440px;

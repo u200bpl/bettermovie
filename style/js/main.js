@@ -12,15 +12,59 @@ function activateSearch() {
 
 //--------------------------------------------------------------------------------
 // DROP DOWN MENU
+function dropDown1() {
+    document.getElementById("myDropdown1").classList.toggle("show");
+}
 
-function dropDown() {
-    document.getElementById("myDropdown").classList.toggle("show");
+function dropDown2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+function dropDown3() {
+    document.getElementById("myDropdown3").classList.toggle("show");
+}
+
+function dropDown4() {
+    document.getElementById("myDropdown4").classList.toggle("show");
 }
   
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+
+    if (!event.target.matches('.dropbtn2')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content2");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+    
+    if (!event.target.matches('.dropbtn3')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content3");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+
+    if (!event.target.matches('.dropbtn4')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content4");
         var i;
         for (i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
@@ -55,3 +99,36 @@ for (const leftButton of leftButtons) {
     index++;
 }
 
+//--------------------------------------------------------------------------------
+// COUNTDOWN TIMER++
+var countDownDate = new Date("Jun 12, 2022 11:00:00").getTime();
+
+// Update every 1 second
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("demo").innerHTML =
+    "<ul class='countdown'>" + 
+    "<li>" + "<span>" + days + "." + "</span>" + "<p>days</p>" + "</li>" +
+    "<li>" + "<span>" + hours + "." + "</span>" + "<p>hours</p>" + "</li>" +
+    "<li>" + "<span>" + minutes + "." + "</span>" + "<p>minutes</p>" + "</li>" +
+    "<li>" + "<span>" + seconds + "</span>" + "<p>seconds</p>" + "</li>" +
+    "</ul>";
+
+    // Countdown over
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "<ul class='countdown'>" + 
+      "<li>" + "<span>" + "00" + "." + "</span>" + "<p>days</p>" + "</li>" +
+      "<li>" + "<span>" + "00" + "." + "</span>" + "<p>hours</p>" + "</li>" +
+      "<li>" + "<span>" + "00" + "." + "</span>" + "<p>minutes</p>" + "</li>" +
+      "<li>" + "<span>" + "00" + "." + "</span>" + "<p>seconds</p>" + "</li>" +
+      "</ul>" + "<a class='btnlive' href='stream.php'><i class='heroicon fa-solid fa-video'></i> Watch</a>";
+    }
+  }, 1000);

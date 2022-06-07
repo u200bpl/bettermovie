@@ -29,7 +29,7 @@
 
             <div class="form-group">
                 <label for="genre">Genre:</label><br>
-                <input type="text" id="genre" name="genre" placeholder="action">
+                <input type="text" id="genre" name="genre" placeholder="action, comedy, horror">
             </div>
 
             <div class="form-group">
@@ -56,11 +56,6 @@
             <div class="form-group">
                 <label for="iframe">Media ID:</label><br>
                 <input type="text" id="iframe" name="iframe" placeholder="tt1464335">
-            </div>
-
-            <div class="form-group">
-                <label for="quality">Quality:</label><br>
-                <input type="text" id="quality" name="quality" placeholder="SD">
             </div>
         </div>
 

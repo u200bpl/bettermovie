@@ -21,9 +21,109 @@
                 <div class="navleft">
                     <a href="<?php echo $base_url; ?>/index.php"><h1><span>Better</span>movie</h1></a>
                     <a href="<?php echo $base_url; ?>/index.php">Homepage</a>
-                    <a href="<?php echo $base_url; ?>/movies.php">Movies</a>
-                    <a href="">Series</a>
-                    <!-- <a href="">My list</a> -->
+                    <div class="dropdown">
+                        <button onclick="dropDown2()" class="dropbtn2">Movies</button>
+                        <div id="myDropdown2" class="dropdown-content2">
+                            <div class="drop2">
+                                <div class="dropsection">
+                                    <h5>Collection</h5>
+                                    <div class="droptext2">
+                                        <a href="<?php echo $base_url; ?>/movie">Marvel</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Harry Potter</a>
+                                    </div>
+                                </div>
+
+                                <div class="dropsection">
+                                    <h5>Genres</h5>
+                                    <div class="droptext2">
+                                        <a href="<?php echo $base_url; ?>/movie">Action</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Anime</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Comedies</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Crime</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Documentaries</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Dramas</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Fantasy</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Horror</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Independent</a>
+                                        <a href="<?php echo $base_url; ?>/movie">International</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Kids & Family</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Music & Musicals</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Romance</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Sci-Fi</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Sports</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Stand-up Comedy</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Thriller</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button onclick="dropDown3()" class="dropbtn3">Series</button>
+                        <div id="myDropdown3" class="dropdown-content3">
+                            <div class="drop3">
+                                <div class="dropsection">
+                                    <h5>Genres</h5>
+                                    <div class="droptext3">
+                                        <a href="<?php echo $base_url; ?>/movie">Action</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Anime</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Comedies</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Crime</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Critics' Picks</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Documentaries</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Dramas</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Fantasy</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Horror</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Independent</a>
+                                        <a href="<?php echo $base_url; ?>/movie">International</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Kids & Family</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Music & Musicals</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Romance</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Sci-Fi</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Sports</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Stand-up Comedy</a>
+                                        <a href="<?php echo $base_url; ?>/movie">Thriller</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button onclick="dropDown4()" class="dropbtn4">Sports</button>
+                        <div id="myDropdown4" class="dropdown-content4">
+                            <div class="drop">
+                                <div class="dropsection">
+                                    <h5>Formula</h5>
+                                    <div class="droptext">
+                                        <a href="<?php echo $base_url; ?>/f1">Formula 1</a>
+                                        <a href="<?php echo $base_url; ?>/f2">Formula 2</a>
+                                        <a href="<?php echo $base_url; ?>/f31">Formula 3</a>
+                                        <a href="<?php echo $base_url; ?>/fe">Formula E</a>
+                                        <a href="<?php echo $base_url; ?>/indy">Indy 500</a>   
+                                    </div>
+                                </div>
+                                
+                                <div class="dropsection">
+                                    <h5>???</h5>
+                                    <div class="droptext">
+                                        <a href="<?php echo $base_url; ?>">???</a>
+                                        <a href="<?php echo $base_url; ?>">???</a>   
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="dropsection">
+                                    <h5>Others</h5>
+                                    <div class="droptext">
+                                        <a href="<?php echo $base_url; ?>/f1">MotoGP</a> 
+                                        <a href="<?php echo $base_url; ?>/f1">Nascar</a>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="navright">
@@ -39,8 +139,8 @@
                     <a href="#"><i class="navicons fa-solid fa-bell"></i></a>                    
                     
                     <div class="dropdown">
-                        <button onclick="dropDown()" class="dropbtn navicons fa-solid fa-user"></button>
-                        <div id="myDropdown" class="dropdown-content">
+                        <button onclick="dropDown1()" class="dropbtn navicons fa-solid fa-user"></button>
+                        <div id="myDropdown1" class="dropdown-content">
                             <?php if(!isset($_SESSION['user_id'])) { ?>
                                 <a href="<?php echo $base_url; ?>/login"><i class="navicons fa-solid fa-user"></i> Login</a>
                                 <a href="<?php echo $base_url; ?>/register"><i class="navicons fa-solid fa-user"></i> Register</a>

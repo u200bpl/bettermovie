@@ -101,7 +101,7 @@ for (const leftButton of leftButtons) {
 
 //--------------------------------------------------------------------------------
 // COUNTDOWN TIMER++
-var countDownDate = new Date("Jun 10, 2022 16:00:00").getTime();
+var countDownDate = new Date("Jun 10, 2022 15:50:00").getTime();
 
 // Update every 1 second
 var x = setInterval(function() {
@@ -126,4 +126,4 @@ var x = setInterval(function() {
       clearInterval(x);
       document.getElementById("demo").innerHTML = "<a class='btnlive' href='stream.php'><i class='heroicon fa-solid fa-video'></i> Watch</a>";
     }
-  }, 1000);
+}, 1000);

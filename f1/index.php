@@ -4,7 +4,6 @@
         require_once '../backend/config.php';
         
         // QUERY F1 GRAND PRIXES
-        // $query = "SELECT * FROM f1 ORDER BY 'order' DESC";
         $query = "SELECT * FROM f1 ORDER BY quantity + 0 ASC";
         $statement = $conn->prepare($query);
         $statement->execute();

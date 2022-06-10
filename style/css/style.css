@@ -775,8 +775,11 @@ nav {
 }
 
 /*              */
-/* SPORT PAGE */
+/* SPORT PAGE   */
 /*              */
+.countdown h2 {
+    font-size: 35px;
+}
 ul.countdown {
     list-style: none;
     padding: 0;
@@ -826,7 +829,7 @@ ul.countdown li p {
 /*               */
 /* 1440P SCREENS */
 /*               */
-@media only screen and (min-width: 1080px) {
+@media only screen and (max-width: 1080px) {
     .hero {
         height: 720px;
     }

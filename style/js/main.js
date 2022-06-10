@@ -101,7 +101,7 @@ for (const leftButton of leftButtons) {
 
 //--------------------------------------------------------------------------------
 // COUNTDOWN TIMER++
-var countDownDate = new Date("Jun 12, 2022 11:00:00").getTime();
+var countDownDate = new Date("Jun 10, 2022 16:00:00").getTime();
 
 // Update every 1 second
 var x = setInterval(function() {
@@ -124,11 +124,6 @@ var x = setInterval(function() {
     // Countdown over
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("demo").innerHTML = "<ul class='countdown'>" + 
-      "<li>" + "<span>" + "00" + "." + "</span>" + "<p>days</p>" + "</li>" +
-      "<li>" + "<span>" + "00" + "." + "</span>" + "<p>hours</p>" + "</li>" +
-      "<li>" + "<span>" + "00" + "." + "</span>" + "<p>minutes</p>" + "</li>" +
-      "<li>" + "<span>" + "00" + "." + "</span>" + "<p>seconds</p>" + "</li>" +
-      "</ul>" + "<a class='btnlive' href='stream.php'><i class='heroicon fa-solid fa-video'></i> Watch</a>";
+      document.getElementById("demo").innerHTML = "<a class='btnlive' href='stream.php'><i class='heroicon fa-solid fa-video'></i> Watch</a>";
     }
   }, 1000);

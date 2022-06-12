@@ -12,29 +12,7 @@
         ?>
 
         <h1>TEST Title:</h1>
-            <?php 
-                if (is_array($values) || is_object($values)) {
-
-                foreach ($values as $value) {
-            ?>
-                <div class="movie-container">
-                    <div class="movie-list2">
-                        <a href=""><img src="style/img/movies/<?php echo $movie['poster']; ?>" alt="<?php echo $movie['title']; ?> img banner"></a>
-                        <div class="overlay">
-                            <div class="sct-left">
-                                <p><i class="fa-solid fa-star"></i></p>
-                            </div>
-                                
-                            <div class="sct-center">
-                                <p><?php echo $movie['title']; ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php
-                }
-             }
-            ?>
+        
     </div>
 </main>
 

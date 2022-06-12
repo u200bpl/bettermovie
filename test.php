@@ -6,6 +6,7 @@
 </header>
 
 <main>
+    <div class="spacer"></div>
     <div class="wrapper" style="color: white">
         <?php
             $arr = "https://api.gdriveplayer.us/v1/movie/newest";

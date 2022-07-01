@@ -152,7 +152,7 @@ INSERT INTO `f1` (`id`, `year`, `quantity`, `country`, `iframe`) VALUES
 	(120, 2021, '20', 'Qatar', '2921811806889'),
 	(121, 2021, '21', 'Saudi Arabia', '3022501841577'),
 	(122, 2021, '22', 'Abu Dhabi', '3098253331113'),
-	(123, 2022, '1', 'Bahrain', '3116699945570'),
+	(123, 2022, '1', 'Bahrain', NULL),
 	(124, 2022, '2', 'Saudi Arabia', NULL),
 	(125, 2022, '3', 'Australia', '3498137553577'),
 	(126, 2022, '4', 'Emilia Romagna', '3532965546665'),
@@ -173,22 +173,21 @@ CREATE TABLE IF NOT EXISTS `movies` (
   `trailer` text DEFAULT NULL,
   `iframe` varchar(256) NOT NULL,
   KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 
 -- Dumping data for table bettermovie.movies: ~10 rows (approximately)
 /*!40000 ALTER TABLE `movies` DISABLE KEYS */;
 INSERT INTO `movies` (`id`, `title`, `description`, `genre`, `duration`, `banner`, `year`, `trailer`, `iframe`) VALUES
-	(1, 'Free Guy', 'In Free Guy, a bank teller who discovers he is actually a background player in an open-world video game, decides to become the hero of his own story...', 'action', 114, 'freeguy', '2021', 'X2m-08cOAbc', 'tt6264654'),
-	(2, 'Iron Man', 'After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.', 'action', 126, 'ironman', '2008', '8ugaeA-nMTc', 'tt0371746'),
-	(3, 'Iron Man 2', 'When Tony Stark\'s world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.', 'action', 125, 'ironman2', '2010', 'BoohRoVA9WQ', 'tt1228705'),
-	(4, 'Iron Man 3', 'With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father\'s legacy.', 'action', 130, 'ironman3', '2013', 'Ke1Y3P9D0Bc', 'tt1300854'),
-	(5, 'Spider-Man: No Way Home', 'With Spider-Man\'s identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.', 'action', 148, 'spidermannowayhome', '2021', 'JfVOs4VSpmA', 'tt10872600'),
-	(6, 'Scream', '25 years after a streak of brutal murders shocked the quiet town of Woodsboro, Calif., a new killer dons the Ghostface mask and begins targeting a group of teenagers to resurrect secrets from the town\'s deadly past.', 'horror', 114, 'scream', '2022', NULL, 'tt11245972'),
-	(7, '9 Bullets', 'A former burlesque dancer turned author discovers a second chance at life and redemption when she risks everything to rescue her young neighbor after he witnesses his parents\' murder. Now on the run from the local crime boss, who happens to be her longtime ex, she makes a desperate attempt to get the boy to safety.', 'action', 91, '9bullets', '2022', NULL, 'tt13680520'),
-	(8, 'Sonic The Hedgehog', 'An extraterrestrial hedgehog is discovered by a scientist with evil intentions and plans to use his superpowers for his selfish needs.', 'adventure', 139, 'sonicthehedgehog', '2020', NULL, 'tt3794354'),
-	(9, 'Uncharted', 'Victor Sullivan recruits Nathan Drake to help him find the lost fortune of Ferdinand Magellan. However, they face competition from Santiago Moncada, who believes that the treasure belongs to him.', 'adventure', 116, 'uncharted', '2022', NULL, 'tt1464335'),
-	(10, 'Sonic The Hedgehog 2', 'After settling in Green Hills, Sonic is eager to prove that he has what it takes to be a true hero. His test comes when Dr. Robotnik returns with a new partner, Knuckles, in search of a mystical emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.', 'adventure', 122, 'sonicthehedgehog2', '2023', NULL, 'tt12412888'),
-	(11, 'Rim of the World', 'Summer camp has barely begun when aliens suddenly invade the planet. In a campground once teeming with people, four misfit teens are unexpectedly entrusted with a key that carries the secret to stopping the invasion. Without any adults or electronics to help guide the way, it\'s clear what they must do: band together, conquer their fears and save the world.', 'action/adventure/comedy', 98, 'rimoftheworld', '2019', 'xkvBpKHL99k', 'tt8179388');
+	(1, 'Free Guy', 'In Free Guy, a bank teller who discovers he is actually a background player in an open-world video game, decides to become the hero of his own story...', 'action', NULL, 'freeguy', '2021', 'X2m-08cOAbc', 'tt6264654'),
+	(2, 'Iron Man', 'After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.', 'action', NULL, 'ironman', '2008', '8ugaeA-nMTc', 'tt0371746'),
+	(3, 'Iron Man 2', 'When Tony Stark\'s world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.', 'action', NULL, 'ironman2', '2010', 'BoohRoVA9WQ', 'tt1228705'),
+	(4, 'Iron Man 3', 'With the world now aware of his identity as Iron Man, Tony Stark must contend with both his declining health and a vengeful mad man with ties to his father\'s legacy.', 'action', NULL, 'ironman3', '2013', 'Ke1Y3P9D0Bc', 'tt1300854'),
+	(5, 'Spider-Man: No Way Home', 'With Spider-Man\'s identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.', 'action', NULL, 'spidermannowayhome', '2021', 'JfVOs4VSpmA', 'tt10872600'),
+	(6, 'Scream', '25 years after a streak of brutal murders shocked the quiet town of Woodsboro, Calif., a new killer dons the Ghostface mask and begins targeting a group of teenagers to resurrect secrets from the town\'s deadly past.', 'horror', NULL, 'scream', '2022', NULL, 'tt11245972'),
+	(7, '9 Bullets', 'A former burlesque dancer turned author discovers a second chance at life and redemption when she risks everything to rescue her young neighbor after he witnesses his parents\' murder. Now on the run from the local crime boss, who happens to be her longtime ex, she makes a desperate attempt to get the boy to safety.', 'action', NULL, '9bullets', '2022', NULL, 'tt13680520'),
+	(8, 'Sonic The Hedgehog', 'An extraterrestrial hedgehog is discovered by a scientist with evil intentions and plans to use his superpowers for his selfish needs.', 'adventure', NULL, 'sonicthehedgehog', '2020', NULL, 'tt3794354'),
+	(9, 'Uncharted', 'Victor Sullivan recruits Nathan Drake to help him find the lost fortune of Ferdinand Magellan. However, they face competition from Santiago Moncada, who believes that the treasure belongs to him.', 'adventure', NULL, 'uncharted', '2022', NULL, 'tt1464335'),
+	(10, 'Sonic The Hedgehog 2', 'After settling in Green Hills, Sonic is eager to prove that he has what it takes to be a true hero. His test comes when Dr. Robotnik returns with a new partner, Knuckles, in search of a mystical emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.', 'adventure', NULL, 'sonicthehedgehog2', '2023', NULL, 'tt12412888');
 /*!40000 ALTER TABLE `movies` ENABLE KEYS */;
 
 -- Dumping structure for table bettermovie.users

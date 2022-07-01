@@ -85,7 +85,7 @@ let index = 0;
 for (const rightButton of rightButtons) {
     const container = containers[index];
     rightButton.addEventListener("click", function () {
-        container.scrollLeft += 1500;
+        container.scrollLeft += 1200;
     });
     index++;
 }
@@ -94,9 +94,41 @@ index = 0;
 for (const leftButton of leftButtons) {
     const container = containers[index];
     leftButton.addEventListener("click", function () {
-        container.scrollLeft -= 1500;
+        container.scrollLeft -= 1200;
     });
     index++;
 }
 
 //--------------------------------------------------------------------------------
+// COUNTDOWN TIMER++
+var countDownDate = new Date("Jun 12, 2022 11:00:00").getTime();
+
+// Update every 1 second
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("demo").innerHTML =
+    "<ul class='countdown'>" + 
+    "<li>" + "<span>" + days + "." + "</span>" + "<p>days</p>" + "</li>" +
+    "<li>" + "<span>" + hours + "." + "</span>" + "<p>hours</p>" + "</li>" +
+    "<li>" + "<span>" + minutes + "." + "</span>" + "<p>minutes</p>" + "</li>" +
+    "<li>" + "<span>" + seconds + "</span>" + "<p>seconds</p>" + "</li>" +
+    "</ul>";
+
+    // Countdown over
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "<ul class='countdown'>" + 
+      "<li>" + "<span>" + "00" + "." + "</span>" + "<p>days</p>" + "</li>" +
+      "<li>" + "<span>" + "00" + "." + "</span>" + "<p>hours</p>" + "</li>" +
+      "<li>" + "<span>" + "00" + "." + "</span>" + "<p>minutes</p>" + "</li>" +
+      "<li>" + "<span>" + "00" + "." + "</span>" + "<p>seconds</p>" + "</li>" +
+      "</ul>" + "<a class='btnlive' href='stream.php'><i class='heroicon fa-solid fa-video'></i> Watch</a>";
+    }
+  }, 1000);

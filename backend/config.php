@@ -10,5 +10,4 @@ $dbUser = 'root';
 $dbPass = '';
 
 //De url waarop jouw project staat. Géén slash aan het einde.
-// $base_url = 'http://localhost/new/bettermovie/';
-$base_url = 'http://localhost/personal/moviesites/bettermovie/';
+$base_url = 'http://localhost/personal/moviesites/bettermovie';

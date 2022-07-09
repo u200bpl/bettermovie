@@ -40,8 +40,7 @@
     -->
     <div class="wrapper">
         <div class="rowstitel">
-            <a href="populair.php"><h4>Recently Added</h4>
-            <p>See full list <i class="fa-solid fa-angles-right"></i></p></a>
+            <h4>Recently Added</h4>
         </div>
     </div>
 
@@ -54,18 +53,9 @@
                 <div class="movie-container">
                     <div class="movie-list2">
                         <a href="movie/watch.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
-                        <div class="overlay">
-                            <div class="sct-left">
-                                <p><i class="fa-solid fa-star"></i></p>
-                            </div>
-                                
+                        <div class="overlay">                                
                             <div class="sct-center">
                                 <p><?php echo $movie['title']; ?></p>
-                            </div>
-
-                            <div class="sct-right">
-                                <a href="https://www.youtube.com/watch?v=<?php echo $movie['trailer']; ?>"><i class="fa-solid fa-clapperboard"></i></a>
-                                <a href="movie/movieinfo.php?id=<?php echo $movie['id']; ?>"><i class="fa-solid fa-circle-info"></i></a>
                             </div>
                         </div>
                     </div>
@@ -79,8 +69,7 @@
     -->
     <div class="wrapper">
         <div class="rowstitel">
-            <a href="populair.php"><h4>Action Movies</h4>
-            <p>See full list <i class="fa-solid fa-angles-right"></i></p></a>
+            <h4>Action Movies</h4>
         </div>
     </div>
 
@@ -94,18 +83,9 @@
                 <div class="movie-container">
                     <div class="movie-list2">
                         <a href="movie/watch.php?id=<?php echo $id;?>"><img src="style/img/movies/<?php echo $movie['banner']; ?>.jpg" alt="<?php echo $movie['title']; ?> img banner"></a>
-                        <div class="overlay">
-                            <div class="sct-left">
-                                <p><i class="fa-solid fa-star"></i></p>
-                            </div>
-                                
+                        <div class="overlay">                               
                             <div class="sct-center">
                                 <p><?php echo $movie['title']; ?></p>
-                            </div>
-
-                            <div class="sct-right">
-                                <a href="https://www.youtube.com/watch?v=<?php echo $movie['trailer']; ?>"><i class="fa-solid fa-clapperboard"></i></a>
-                                <a href="movie/movieinfo.php?id=<?php echo $movie['id']; ?>"><i class="fa-solid fa-circle-info"></i></a>
                             </div>
                         </div>
                     </div>

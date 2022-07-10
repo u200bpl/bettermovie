@@ -2,7 +2,7 @@
     session_start();
 
     // Query
-    require_once 'backend/conn.php';
+    require_once('C:\xampp\htdocs\personal\moviesites\bettermovie\backend/conn.php');
     $query = "SELECT * FROM movies";
     $statement = $conn->prepare($query);
     $statement->execute();
@@ -90,40 +90,7 @@
                         </div>
                     </div>
 
-                    <div class="dropdown">
-                        <button onclick="dropDown4()" class="dropbtn4">Sports</button>
-                        <div id="myDropdown4" class="dropdown-content4">
-                            <div class="drop">
-                                <div class="dropsection">
-                                    <h5>Formula</h5>
-                                    <div class="droptext">
-                                        <a href="<?php echo $base_url; ?>/f1">Formula 1</a>
-                                        <a href="<?php echo $base_url; ?>/f2">Formula 2</a>
-                                        <a href="<?php echo $base_url; ?>/f31">Formula 3</a>
-                                        <a href="<?php echo $base_url; ?>/fe">Formula E</a>
-                                        <a href="<?php echo $base_url; ?>/indy">Indy 500</a>   
-                                    </div>
-                                </div>
-                                
-                                <div class="dropsection">
-                                    <h5>???</h5>
-                                    <div class="droptext">
-                                        <a href="<?php echo $base_url; ?>">???</a>
-                                        <a href="<?php echo $base_url; ?>">???</a>   
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="dropsection">
-                                    <h5>Others</h5>
-                                    <div class="droptext">
-                                        <a href="<?php echo $base_url; ?>/f1">MotoGP</a> 
-                                        <a href="<?php echo $base_url; ?>/f1">Nascar</a>    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="<?php echo $base_url; ?>/f1">Formula 1</a>
                 </div>
 
                 <div class="navright">
